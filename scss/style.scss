@@ -11,8 +11,15 @@ $maxWidthContainer: 1220;
 $containerPadding: 30;
 $containerWidth: $maxWidthContainer + $containerPadding;
 
+$purpleColor: #8a33fd;
+$lightColor: #f6f6f6;
+$defaultTextColor: #807d7e;
+$darkGrayTextColor: #3c4242;
+$blackTextColor: #2a2f2f;
 @import "_common.scss";
 body {
+  font-family: "Causten", sans-serif;
+  color: $defaultTextColor;
 }
 
 [class*="__container"] {

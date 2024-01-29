@@ -62,7 +62,8 @@ button {
 
 button,
 select,
-option {
+option,
+a {
   cursor: pointer;
 }
 
@@ -111,35 +112,35 @@ textarea {
   font-display: swap;
 }
 @font-face {
-  font-family: "CoreSans";
+  font-family: "Core Sans C";
   src: url("../fonts/CoreSansC-45Regular.woff2") format("woff2"), url("../fonts/CoreSansC-45Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "CoreSans";
+  font-family: "Core Sans C";
   src: url("../fonts/CoreSansC-55Medium.woff2") format("woff2"), url("../fonts/CoreSansC-55Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "CoreSans";
+  font-family: "Core Sans C";
   src: url("../fonts/CoreSansC-65Bold.woff2") format("woff2"), url("../fonts/CoreSansC-65Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "CoreSans";
+  font-family: "Core Sans C";
   src: url("../fonts/CoreSansC-75ExtraBold.woff2") format("woff2"), url("../fonts/CoreSansC-75ExtraBold.woff") format("woff");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "CoreSans";
+  font-family: "Core Sans C";
   src: url("../fonts/CoreSansC-85Heavy.woff2") format("woff2"), url("../fonts/CoreSansC-85Heavy.woff") format("woff");
   font-weight: 900;
   font-style: normal;
@@ -152,6 +153,10 @@ textarea {
   font-style: normal;
   font-display: swap;
 }
+.title-section {
+  font-family: "Core Sans C", sans-serif;
+}
+
 [class*=" _icon-"]::before {
   font-family: "icons" !important;
   display: inline-block;
@@ -306,6 +311,132 @@ textarea {
 
 ._icon-search:before {
   content: "\e923";
+}
+
+.title-section {
+  color: #3c4242;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: flex-start;
+  column-gap: 0.5882352941em;
+  text-transform: capitalize;
+  line-height: 1.1;
+}
+@media (min-width: 78.125em) {
+  .title-section {
+    font-size: 2.125rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 78.125em) {
+  @supports (font-size: clamp( 1.5rem , 1.2849462366rem  +  1.0752688172vw , 2.125rem )) {
+    .title-section {
+      font-size: clamp( 1.5rem , 1.2849462366rem  +  1.0752688172vw , 2.125rem );
+    }
+  }
+  @supports not (font-size: clamp( 1.5rem , 1.2849462366rem  +  1.0752688172vw , 2.125rem )) {
+    .title-section {
+      font-size: calc(1.5rem + 0.625 * (100vw - 20rem) / 58.125);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .title-section {
+    font-size: 1.5rem;
+  }
+}
+.title-section::before {
+  content: "";
+  border-radius: 10px;
+  background-color: #8a33fd;
+  flex: 0 0 0.1764705882em;
+  width: 0.1764705882em;
+  height: 0.8823529412em;
+  margin-top: 0.0882352941em;
+}
+
+.item-preview {
+  width: 282px;
+  margin-bottom: 50px;
+  display: grid;
+  gap: 1.875rem;
+}
+.item-preview__picture-link {
+  display: block;
+  overflow: hidden;
+  border-radius: 12px;
+}
+@media (any-hover: hover) {
+  .item-preview__picture-link:hover .item-preview__image {
+    transform: scale(1.02);
+  }
+}
+.item-preview__image {
+  aspect-ratio: 282/370;
+  object-fit: cover;
+  width: 100%;
+  transition: transform 0.2s;
+}
+.item-preview--category .item-preview__image {
+  aspect-ratio: 270/393;
+}
+.item-preview__body {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.3125rem;
+}
+.item-preview__title {
+  color: #3c4242;
+  font-weight: 600;
+}
+.item-preview--category .item-preview__title {
+  font-weight: 700;
+  color: #2a2f2f;
+  font-size: 1.125rem;
+  letter-spacing: -0.0446875rem;
+}
+.item-preview__title-link {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.2s;
+}
+@media (any-hover: hover) {
+  .item-preview__title-link:hover {
+    text-decoration-color: inherit;
+  }
+}
+.item-preview__label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  grid-row: 2;
+}
+.item-preview__arrow-link, .item-preview__price {
+  grid-row: span 2;
+}
+.item-preview__arrow-link {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  transition: color 0.2s;
+}
+@media (any-hover: hover) {
+  .item-preview__arrow-link:hover {
+    color: #2a2f2f;
+  }
+}
+.item-preview__price {
+  color: #3c4242;
+  background-color: #f6f6f6;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 0.625rem 1.25rem;
+  align-self: center;
+}
+
+body {
+  font-family: "Causten", sans-serif;
+  color: #807d7e;
 }
 
 [class*=__container] {
