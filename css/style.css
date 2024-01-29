@@ -1,0 +1,327 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  line-height: 1;
+  height: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  color: inherit;
+  background-color: transparent;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+button,
+select,
+option {
+  cursor: pointer;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+@font-face {
+  font-family: "Causten";
+  src: url("../fonts/Causten-Regular.woff2") format("woff2"), url("../fonts/Causten-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Causten";
+  src: url("../fonts/Causten-Medium.woff2") format("woff2"), url("../fonts/Causten-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Causten";
+  src: url("../fonts/Causten-Light.woff2") format("woff2"), url("../fonts/Causten-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Causten";
+  src: url("../fonts/Causten-Bold.woff2") format("woff2"), url("../fonts/Causten-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Causten";
+  src: url("../fonts/Causten-SemiBold.woff2") format("woff2"), url("../fonts/Causten-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CoreSans";
+  src: url("../fonts/CoreSansC-45Regular.woff2") format("woff2"), url("../fonts/CoreSansC-45Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CoreSans";
+  src: url("../fonts/CoreSansC-55Medium.woff2") format("woff2"), url("../fonts/CoreSansC-55Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CoreSans";
+  src: url("../fonts/CoreSansC-65Bold.woff2") format("woff2"), url("../fonts/CoreSansC-65Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CoreSans";
+  src: url("../fonts/CoreSansC-75ExtraBold.woff2") format("woff2"), url("../fonts/CoreSansC-75ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CoreSans";
+  src: url("../fonts/CoreSansC-85Heavy.woff2") format("woff2"), url("../fonts/CoreSansC-85Heavy.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+[class*=" _icon-"]::before {
+  font-family: "icons" !important;
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+._icon-settings:before {
+  content: "\e900";
+}
+
+._icon-trash:before {
+  content: "\e901";
+}
+
+._icon-truck:before {
+  content: "\e902";
+}
+
+._icon-t-shirt:before {
+  content: "\e903";
+}
+
+._icon-twtr:before {
+  content: "\e904";
+}
+
+._icon-user:before {
+  content: "\e905";
+}
+
+._icon-star-fill:before {
+  content: "\e906";
+}
+
+._icon-star-half:before {
+  content: "\e907";
+}
+
+._icon-star-empty:before {
+  content: "\e908";
+}
+
+._icon-lock:before {
+  content: "\e909";
+}
+
+._icon-arrow-down:before {
+  content: "\e90a";
+}
+
+._icon-arrow-left:before {
+  content: "\e90b";
+}
+
+._icon-arrow-right:before {
+  content: "\e90c";
+}
+
+._icon-arrow-up:before {
+  content: "\e90d";
+}
+
+._icon-cart:before {
+  content: "\e90e";
+}
+
+._icon-checkbox:before {
+  content: "\e90f";
+}
+
+._icon-chevron-down:before {
+  content: "\e910";
+}
+
+._icon-chevron-left:before {
+  content: "\e911";
+}
+
+._icon-chevron-right:before {
+  content: "\e912";
+}
+
+._icon-chevron-up:before {
+  content: "\e913";
+}
+
+._icon-credit-card:before {
+  content: "\e914";
+}
+
+._icon-eye-hide:before {
+  content: "\e915";
+}
+
+._icon-eye-see:before {
+  content: "\e916";
+}
+
+._icon-fb:before {
+  content: "\e917";
+}
+
+._icon-heart:before {
+  content: "\e918";
+}
+
+._icon-Icon-Stroke:before {
+  content: "\e919";
+}
+
+._icon-exit:before {
+  content: "\e91a";
+}
+
+._icon-eye:before {
+  content: "\e91b";
+}
+
+._icon-cross:before {
+  content: "\e91c";
+}
+
+._icon-inst:before {
+  content: "\e91d";
+}
+
+._icon-linkedin:before {
+  content: "\e91e";
+}
+
+._icon-message:before {
+  content: "\e91f";
+}
+
+._icon-play:before {
+  content: "\e920";
+}
+
+._icon-play-circle:before {
+  content: "\e921";
+}
+
+._icon-returns:before {
+  content: "\e922";
+}
+
+._icon-search:before {
+  content: "\e923";
+}
+
+[class*=__container] {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+}
+
+.wrapper {
+  overflow: clip;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  flex-grow: 1;
+}
