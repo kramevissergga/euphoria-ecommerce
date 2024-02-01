@@ -16,10 +16,16 @@ $lightColor: #f6f6f6;
 $defaultTextColor: #807d7e;
 $darkGrayTextColor: #3c4242;
 $blackTextColor: #2a2f2f;
+
 @import "_common.scss";
+@import "_header.scss";
+@import "_footer.scss";
 body {
   font-family: "Causten", sans-serif;
   color: $defaultTextColor;
+  &.menu-open {
+    overflow: hidden;
+  }
 }
 
 [class*="__container"] {
@@ -34,10 +40,14 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  @media (max-width: toEm(540)) {
+    padding-bottom: toRem(74);
+  }
 }
-
-@import "_header.scss";
 
 .page {
   flex-grow: 1;
+  background-color: rgb(219, 122, 138);
+  color: #f6f6f6;
+  @include adaptiveValue("padding-top", 108, 70);
 }

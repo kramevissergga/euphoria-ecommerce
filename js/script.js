@@ -1,8 +1,7 @@
-const menuSwitch = document.querySelector(".menu-switch");
-menuSwitch.addEventListener("click", function () {
-  document.documentElement.classList.toggle("menu-open");
-});
-const searchSwitch = document.querySelector(".search-switch");
-searchSwitch.addEventListener("click", function () {
-  document.documentElement.classList.toggle("search-open");
-});
+"use strict";
+document.addEventListener("click", documentClick);
+function documentClick(e) {
+  if (e.target.closest(".menu-switch")) {
+    document.body.classList.toggle("menu-open");
+  }
+}
