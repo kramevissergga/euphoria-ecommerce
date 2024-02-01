@@ -10,7 +10,8 @@
     display: flex;
     align-items: center;
     gap: toRem(12);
-    @media (min-width: toEm(927)) {
+    @include adaptiveValue("gap", 20, 12, 3, 950, 320);
+    @media (min-width: toEm(950)) {
       justify-content: space-between;
     }
   }
@@ -22,7 +23,7 @@
 
   &__search {
     height: toRem(44);
-    @media (min-width: toEm(927)) {
+    @media (min-width: toEm(950)) {
       width: 21.885246%;
       flex-grow: 0;
     }
@@ -47,7 +48,7 @@
 }
 .menu {
   &__body {
-    @media (max-width: toEm(927)) {
+    @media (max-width: toEm(950)) {
       @include adaptiveValue("padding-top", 120, 80);
       position: fixed;
       top: 0;
@@ -81,7 +82,7 @@
 
   &__list {
     display: flex;
-    @media (max-width: toEm(927)) {
+    @media (max-width: toEm(950)) {
       flex-direction: column;
       align-items: center;
       row-gap: toRem(20);
@@ -100,8 +101,8 @@
       color: $darkGrayTextColor;
       pointer-events: none;
     }
-    @media (max-width: toEm(927)) {
-      font-size: toRem(30);
+    @media (max-width: toEm(950)) {
+      font-size: toRem(36);
     }
     @media (any-hover: hover) {
       &:hover {
@@ -178,7 +179,7 @@
 }
 
 .menu-switch {
-  @media (min-width: toEm(927)) {
+  @media (min-width: toEm(950)) {
     display: none;
   }
   flex-shrink: 0;
