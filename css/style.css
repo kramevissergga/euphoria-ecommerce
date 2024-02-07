@@ -615,6 +615,7 @@ textarea {
   .menu__body::before {
     content: "";
     background-color: white;
+    border-bottom: 0.0625rem solid #bebcbd;
     position: fixed;
     top: 0;
     right: 100%;
@@ -624,24 +625,24 @@ textarea {
 }
 @media (max-width: 59.375em) and (min-width: 78.125em) {
   .menu__body::before {
-    height: 6.75rem;
+    height: 6.6875rem;
   }
 }
 @media (max-width: 59.375em) and (min-width: 20em) and (max-width: 78.125em) {
-  @supports (height: clamp( 4.375rem , 3.5577956989rem  +  4.0860215054vw , 6.75rem )) {
+  @supports (height: clamp( 4.3125rem , 3.4952956989rem  +  4.0860215054vw , 6.6875rem )) {
     .menu__body::before {
-      height: clamp( 4.375rem , 3.5577956989rem  +  4.0860215054vw , 6.75rem );
+      height: clamp( 4.3125rem , 3.4952956989rem  +  4.0860215054vw , 6.6875rem );
     }
   }
-  @supports not (height: clamp( 4.375rem , 3.5577956989rem  +  4.0860215054vw , 6.75rem )) {
+  @supports not (height: clamp( 4.3125rem , 3.4952956989rem  +  4.0860215054vw , 6.6875rem )) {
     .menu__body::before {
-      height: calc(4.375rem + 2.375 * (100vw - 20rem) / 58.125);
+      height: calc(4.3125rem + 2.375 * (100vw - 20rem) / 58.125);
     }
   }
 }
 @media (max-width: 59.375em) and (max-width: 20em) {
   .menu__body::before {
-    height: 4.375rem;
+    height: 4.3125rem;
   }
 }
 @media (max-width: 59.375em) {
