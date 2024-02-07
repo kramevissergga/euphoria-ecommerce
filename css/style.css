@@ -490,6 +490,7 @@ textarea {
   left: 0;
   width: 100%;
   background-color: #fff;
+  border-bottom: 0.0625rem solid #bebcbd;
 }
 .header__container {
   display: flex;
@@ -498,24 +499,24 @@ textarea {
 }
 @media (min-width: 78.125em) {
   .header__container {
-    min-height: 6.75rem;
+    min-height: 6.6875rem;
   }
 }
 @media (min-width: 20em) and (max-width: 78.125em) {
-  @supports (min-height: clamp( 4.375rem , 3.5577956989rem  +  4.0860215054vw , 6.75rem )) {
+  @supports (min-height: clamp( 4.3125rem , 3.4952956989rem  +  4.0860215054vw , 6.6875rem )) {
     .header__container {
-      min-height: clamp( 4.375rem , 3.5577956989rem  +  4.0860215054vw , 6.75rem );
+      min-height: clamp( 4.3125rem , 3.4952956989rem  +  4.0860215054vw , 6.6875rem );
     }
   }
-  @supports not (min-height: clamp( 4.375rem , 3.5577956989rem  +  4.0860215054vw , 6.75rem )) {
+  @supports not (min-height: clamp( 4.3125rem , 3.4952956989rem  +  4.0860215054vw , 6.6875rem )) {
     .header__container {
-      min-height: calc(4.375rem + 2.375 * (100vw - 20rem) / 58.125);
+      min-height: calc(4.3125rem + 2.375 * (100vw - 20rem) / 58.125);
     }
   }
 }
 @media (max-width: 20em) {
   .header__container {
-    min-height: 4.375rem;
+    min-height: 4.3125rem;
   }
 }
 @media (min-width: 20em) and (max-width: 59.375em) {
@@ -564,8 +565,9 @@ textarea {
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 0.9375rem;
+    padding: 0.90625rem;
     background-color: #fff;
+    border-top: 0.0625rem solid #bebcbd;
   }
   .header__actions .actions-header__item {
     flex-grow: 1;
@@ -762,9 +764,11 @@ textarea {
   background-color: #f6f6f6;
   transition: all 0.3s;
 }
-.actions-header__item:hover {
-  color: #fff;
-  background-color: #8a33fd;
+@media (any-hover: hover) {
+  .actions-header__item:hover {
+    color: #fff;
+    background-color: #8a33fd;
+  }
 }
 
 .menu-switch {
