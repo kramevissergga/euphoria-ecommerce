@@ -1,5 +1,5 @@
 .title-section {
-  color: $darkGrayTextColor;
+  color: $darkGrayColor;
   @extend %CSC;
   @include adaptiveValue("font-size", 34, 24);
   font-weight: 600;
@@ -72,13 +72,13 @@
   }
 
   &__title {
-    color: $darkGrayTextColor;
+    color: $darkGrayColor;
     font-weight: 600;
     min-width: 0;
 
     .item-preview--category & {
       font-weight: 700;
-      color: $blackTextColor;
+      color: $blackColor;
       font-size: toRem(18);
       letter-spacing: toRem(-0.715);
     }
@@ -116,13 +116,13 @@
     transition: color 0.3s;
     @media (any-hover: hover) {
       &:hover {
-        color: $blackTextColor;
+        color: $blackColor;
       }
     }
   }
 
   &__price {
-    color: $darkGrayTextColor;
+    color: $darkGrayColor;
     background-color: $lightColor;
     border-radius: toRem(8);
     font-weight: 700;

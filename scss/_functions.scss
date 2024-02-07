@@ -91,3 +91,13 @@
   align-items: center;
   justify-content: center;
 }
+%underline-hover {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.3s;
+  @media (any-hover: hover) {
+    &:hover {
+      text-decoration-color: inherit;
+    }
+  }
+}

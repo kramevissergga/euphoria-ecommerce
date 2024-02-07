@@ -1,5 +1,5 @@
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -98,7 +98,7 @@
     font-weight: 500;
     &--active {
       font-weight: 700;
-      color: $darkGrayTextColor;
+      color: $darkGrayColor;
       pointer-events: none;
     }
     @media (max-width: toEm(950)) {
@@ -123,9 +123,6 @@
       transition: all 0.3s;
     }
   }
-
-  &__link {
-  }
 }
 .search {
   position: relative;
@@ -135,7 +132,7 @@
     height: 100%;
     border-radius: 8px;
     background: $lightColor;
-    color: $darkGrayTextColor;
+    color: $darkGrayColor;
     &::placeholder {
       transition: all 0.3s;
     }
@@ -155,7 +152,7 @@
     transition: color 0.3s;
     @media (any-hover: hover) {
       &:hover {
-        color: $blackTextColor;
+        color: $blackColor;
       }
     }
   }
