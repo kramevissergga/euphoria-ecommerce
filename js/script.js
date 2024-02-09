@@ -94,3 +94,18 @@ let slideUp = (target, duration = 500) => {
 let slideToggle = (target, duration = 500) => {
   target.hidden ? slideDown(target, duration) : slideUp(target, duration);
 };
+
+var splide = new Splide(".splide", {
+  pagination: true,
+  type: `loop`,
+  speed: 800,
+  autoHeight: true,
+  // autoplay: true,
+  interval: 6000,
+  pauseOnHover: true,
+  classes: {
+    pagination: "splide__pagination",
+    page: "splide__pagination-page",
+  },
+});
+splide.mount();

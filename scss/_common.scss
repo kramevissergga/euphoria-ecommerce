@@ -131,3 +131,164 @@
     align-self: center;
   }
 }
+
+.common {
+  &__buttons {
+    padding: toRem(50);
+    display: inline-grid;
+    gap: toRem(20);
+  }
+}
+.button {
+  padding: toRem(16) toRem(20);
+  border-radius: toRem(8);
+  background-color: $purpleColor;
+  color: #fff;
+  font-size: toRem(18);
+  font-weight: 500;
+  transition: all 0.3s;
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: #6620c1;
+      box-shadow: 0 toRem(3) toRem(4) 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+  &:focus {
+    background-color: #6620c1;
+    box-shadow: none;
+  }
+  &:disabled {
+    background-color: #eaeaea;
+    color: #807d7e;
+    box-shadow: none;
+  }
+  &--white {
+    color: $darkGrayColor;
+    background-color: #ffffff;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: $blackColor;
+        color: #fff;
+      }
+    }
+    &:focus {
+      background-color: $blackColor;
+      color: #fff;
+    }
+    &:disabled {
+      color: #807d7e;
+      box-shadow: none;
+    }
+  }
+  &--border {
+    border: toRem(1) solid #3c4242;
+    color: $purpleColor;
+    background-color: #fff;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #faf8fd;
+        box-shadow: none;
+      }
+    }
+    &:focus {
+      border: 1px solid $purpleColor;
+      background-color: #faf8fd;
+    }
+    &:disabled {
+      background-color: #eaeaea;
+      color: #807d7e;
+      box-shadow: none;
+    }
+  }
+  &--text {
+    color: $purpleColor;
+    background-color: transparent;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: rgba(102, 32, 193, 0.03);
+      }
+    }
+    &:focus {
+      background-color: rgba(102, 32, 193, 0.03);
+    }
+    &:disabled {
+      color: #807d7e;
+      box-shadow: none;
+    }
+  }
+  &--ruslan {
+    @media (any-hover: hover) {
+      &:hover {
+        .dick {
+          &--left {
+            animation: spin-left linear infinite 3s;
+          }
+          &--right {
+            animation: spin-right linear infinite 3s;
+          }
+        }
+      }
+    }
+    position: relative;
+    .dick {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #fff;
+      aspect-ratio: 17/35;
+      width: 7%;
+      border-radius: 40% 40% 0 0;
+      &--left {
+        left: 10%;
+      }
+      &--right {
+        right: 10%;
+      }
+      &::before,
+      &::after {
+        content: "";
+        height: toRem(15);
+        width: toRem(15);
+        border-radius: 50%;
+        background-color: inherit;
+        position: absolute;
+        top: 70%;
+      }
+      &::before {
+        left: 50%;
+      }
+      &::after {
+        right: 50%;
+      }
+    }
+  }
+  &--text-shadow {
+    color: $purpleColor;
+    background-color: transparent;
+    box-shadow: 0 toRem(3) toRem(4) 0 rgba(0, 0, 0, 0.1);
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: rgba(102, 32, 193, 0.03);
+      }
+    }
+    &:focus {
+      background-color: rgba(102, 32, 193, 0.03);
+    }
+    &:disabled {
+      background-color: #eaeaea;
+      color: #807d7e;
+      box-shadow: none;
+    }
+  }
+}
+
+@keyframes spin-right {
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+@keyframes spin-left {
+  to {
+    transform: translateY(-50%) rotate(-360deg);
+  }
+}

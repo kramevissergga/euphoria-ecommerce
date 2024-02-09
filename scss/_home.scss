@@ -1,0 +1,119 @@
+.splide {
+  &__track {
+  }
+
+  &__list {
+  }
+
+  &__slide {
+  }
+
+  &__pagination {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    @include adaptiveValue("bottom", 49, 10);
+    @extend %f-center;
+    flex-wrap: wrap;
+    &-page {
+      opacity: 0.5;
+      height: toRem(10);
+      @include adaptiveValue("width", 63, 30);
+      background-color: #fff;
+      transition: opacity 0.3s;
+      .splide__pagination li:first-child & {
+        border-radius: toRem(12) toRem(0) toRem(0) toRem(12);
+      }
+      .splide__pagination li:last-child & {
+        border-radius: toRem(0) toRem(12) toRem(12) toRem(0);
+      }
+
+      &.is-active {
+        opacity: 1;
+      }
+    }
+  }
+  &__arrows {
+    @media (max-width: toEm(768)) {
+      display: none;
+    }
+    display: flex;
+    gap: toRem(1);
+  }
+
+  &__arrow {
+    transition: opacity 0.3s;
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.4;
+      }
+    }
+    font-size: toRem(44);
+    position: absolute;
+    top: 50%;
+    color: #fff;
+    &::before {
+      max-width: 100%;
+    }
+  }
+
+  &__arrow--prev {
+    @include adaptiveValue("left", 40, 10, 2, $containerWidth, 768);
+  }
+
+  &__arrow--next {
+    @include adaptiveValue("right", 40, 10, 2, $containerWidth, 768);
+  }
+}
+.slide-hero {
+  position: relative;
+  width: 100%;
+  &__container {
+  }
+
+  &__body {
+    @include adaptiveValue("margin-left", 85, 40, 2, $containerWidth, 768);
+    @include adaptiveValue("margin-right", 85, 40, 2, $containerWidth, 768);
+    @include adaptiveValue("padding-top", 129, 30);
+    @include adaptiveValue("padding-bottom", 132, 40);
+    position: relative;
+    z-index: 2;
+    display: grid;
+    @media (min-width: toEm(400)) {
+      justify-items: start;
+    }
+    @include adaptiveValue("row-gap", 40, 15);
+  }
+
+  &__label {
+    color: #fff;
+    @extend %CSC;
+    font-size: 32px;
+    @include adaptiveValue("font-size", 32, 18);
+    font-weight: 500;
+    line-height: 1.18;
+    letter-spacing: 0.157px;
+  }
+
+  &__title {
+    color: #fff;
+    @extend %CSC;
+    @include adaptiveValue("font-size", 78, 40);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 0.315px;
+  }
+
+  &__link {
+    min-width: toRem(250);
+    text-align: center;
+  }
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <title>Home</title>
@@ -40,7 +41,7 @@
           <button class="search__button _icon-search" type="submit"></button>
         </form>
         <div class="header__actions actions-header">
-          <a href="#" class="actions-header__item _icon-heart"></a>
+          <a href="#" class="actions-header__item _icon-favorite"></a>
           <a href="#" class="actions-header__item _icon-user"></a>
           <a href="#" class="actions-header__item _icon-cart"></a>
         </div>
@@ -52,7 +53,48 @@
       </div>
     </header>
     <main class="page">
-
+      <section class="page__hero splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide slide-hero">
+              <div class="slide-hero__container">
+                <div class="slide-hero__body">
+                  <div class="slide-hero__label">T-shirt / Tops</div>
+                  <div class="slide-hero__title">Summer
+                    Value <br> Pack</div>
+                  <div class="slide-hero__label">cool / colorful / comfy</div>
+                  <a href="#" class="slide-hero__link button button--white">Shop Now</a>
+                </div>
+                <img class="slide-hero__image" src="img/modules/hero-slider/01.webp"
+                  alt="Woman with packages on a blue background">
+              </div>
+            </li>
+            <li class="splide__slide slide-hero">
+              <div class="slide-hero__container">
+                <div class="slide-hero__body">
+                  <div class="slide-hero__label">Ass / Cock</div>
+                  <div class="slide-hero__title">Try Our
+                    Ruslan Fuck <br> Costume</div>
+                  <div class="slide-hero__label">cool / colorful / BIG</div>
+                  <a href="#" class="slide-hero__link button button--ruslan button--white">
+                    <span class="dick dick--left"></span>
+                    <span class="dick dick--right"></span>
+                    Shop Now</a>
+                </div>
+                <img class="slide-hero__image" src="img/modules/hero-slider/02.webp"
+                  alt="Woman with packages on a blue background">
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="splide__arrows">
+          <button class="splide__arrow splide__arrow--prev _icon-ch-left" aria-label="Previous slide">
+          </button>
+          <button class="splide__arrow splide__arrow--next _icon-ch-right" aria-label="Next slide">
+          </button>
+        </div>
+        <ul class="splide__pagination"></ul>
+      </section>
     </main>
     <footer class="footer">
       <div class="footer__container">
@@ -134,16 +176,17 @@
           <div class="footer__social social-footer">
             <ul class="social-footer__list">
               <li class="social-footer__item">
-                <a href="#" aria-label="Facebook Link" target="_blank" class="social-footer__link _icon-fb"></a>
+                <a href="#" aria-label="Facebook Link" target="_blank" class="social-footer__link _icon-s-facebook"></a>
               </li>
               <li class="social-footer__item">
-                <a href="#" aria-label="Instagram Link" target="_blank" class="social-footer__link _icon-inst"></a>
+                <a href="#" aria-label="Instagram Link" target="_blank"
+                  class="social-footer__link _icon-s-instagram"></a>
               </li>
               <li class="social-footer__item">
-                <a href="#" aria-label="Twitter Link" target="_blank" class="social-footer__link _icon-twtr"></a>
+                <a href="#" aria-label="Twitter Link" target="_blank" class="social-footer__link _icon-s-twitter"></a>
               </li>
               <li class="social-footer__item">
-                <a href="#" aria-label="LinkedIn Link" target="_blank" class="social-footer__link _icon-linkedin"></a>
+                <a href="#" aria-label="LinkedIn Link" target="_blank" class="social-footer__link _icon-s-linkedin"></a>
               </li>
             </ul>
           </div>
@@ -161,7 +204,7 @@
         </div>
         <div class="footer__popular popular-footer">
           <h5 data-spoiler class="popular-footer__title">
-            <button class="popular-footer__title-button _icon-chevron-down">
+            <button class="popular-footer__title-button _icon-ch-down">
               Popular Categories
             </button>
           </h5>
@@ -186,6 +229,7 @@
       </div>
     </footer>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 

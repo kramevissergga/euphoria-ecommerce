@@ -5,7 +5,7 @@
   width: 100%;
   background-color: #fff;
   border-bottom: toRem(1) solid #bebcbd;
-
+  z-index: 50;
   &__container {
     @include adaptiveValue("min-height", 107, 69);
     display: flex;
