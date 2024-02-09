@@ -604,47 +604,6 @@ textarea {
   color: #807d7e;
   box-shadow: none;
 }
-.button--ruslan {
-  position: relative;
-}
-@media (any-hover: hover) {
-  .button--ruslan:hover .dick--left {
-    animation: spin-left linear infinite 3s;
-  }
-  .button--ruslan:hover .dick--right {
-    animation: spin-right linear infinite 3s;
-  }
-}
-.button--ruslan .dick {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #fff;
-  aspect-ratio: 17/35;
-  width: 7%;
-  border-radius: 40% 40% 0 0;
-}
-.button--ruslan .dick--left {
-  left: 10%;
-}
-.button--ruslan .dick--right {
-  right: 10%;
-}
-.button--ruslan .dick::before, .button--ruslan .dick::after {
-  content: "";
-  height: 0.9375rem;
-  width: 0.9375rem;
-  border-radius: 50%;
-  background-color: inherit;
-  position: absolute;
-  top: 70%;
-}
-.button--ruslan .dick::before {
-  left: 50%;
-}
-.button--ruslan .dick::after {
-  right: 50%;
-}
 .button--text-shadow {
   color: #8a33fd;
   background-color: transparent;
@@ -664,16 +623,6 @@ textarea {
   box-shadow: none;
 }
 
-@keyframes spin-right {
-  to {
-    transform: translateY(-50%) rotate(360deg);
-  }
-}
-@keyframes spin-left {
-  to {
-    transform: translateY(-50%) rotate(-360deg);
-  }
-}
 .header {
   position: sticky;
   top: 0;
