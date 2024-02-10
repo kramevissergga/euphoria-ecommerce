@@ -50,5 +50,12 @@ body {
   flex-grow: 1;
 
   &__hero {
+    @include adaptiveValue("margin-bottom", 130, 40);
+  }
+  &__deals {
+    @include adaptiveValue("margin-bottom", 100, 30);
+  }
+  &__new {
+    @include adaptiveValue("margin-bottom", 100, 30);
   }
 }

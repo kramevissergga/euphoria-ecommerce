@@ -53,15 +53,15 @@
       </div>
     </header>
     <main class="page">
-      <section class="page__hero splide">
+      <section id="splide-hero" class="page__hero splide">
         <div class="splide__track">
           <ul class="splide__list">
             <li class="splide__slide slide-hero">
               <div class="slide-hero__container">
                 <div class="slide-hero__body">
                   <div class="slide-hero__label">T-shirt / Tops</div>
-                  <div class="slide-hero__title">Summer
-                    Value <br> Pack</div>
+                  <h2 class="slide-hero__title">Summer
+                    Value <br> Pack</h2>
                   <div class="slide-hero__label">cool / colorful / comfy</div>
                   <a href="#" class="slide-hero__link button button--white">Shop Now</a>
                 </div>
@@ -73,25 +73,103 @@
               <div class="slide-hero__container">
                 <div class="slide-hero__body">
                   <div class="slide-hero__label">Fashion / Style</div>
-                  <div class="slide-hero__title">Try Our
-                    New <br> Costume</div>
+                  <h2 class="slide-hero__title">Try Our
+                    New <br> Costume</h2>
                   <div class="slide-hero__label">best / price / ever</div>
                   <a href="#" class="slide-hero__link button button--ruslan button--white">
                     Shop Now</a>
                 </div>
-                <img class="slide-hero__image" src="img/modules/hero-slider/02.webp"
-                  alt="Woman with packages on a blue background">
+                <img class="slide-hero__image" src="img/modules/hero-slider/02.webp" alt="Woman with packages">
               </div>
             </li>
           </ul>
         </div>
-        <div class="splide__arrows">
-          <button class="splide__arrow splide__arrow--prev _icon-ch-left" aria-label="Previous slide">
+        <div class="splide__arrows splide__arrows--hero">
+          <button class="splide__arrow splide__arrow--hero splide__arrow--prev _icon-ch-left"
+            aria-label="Previous slide">
           </button>
-          <button class="splide__arrow splide__arrow--next _icon-ch-right" aria-label="Next slide">
+          <button class="splide__arrow splide__arrow--hero splide__arrow--next _icon-ch-right" aria-label="Next slide">
           </button>
         </div>
         <ul class="splide__pagination"></ul>
+      </section>
+      <div class="page__deals deals">
+        <div class="deals__container">
+          <div class="deals__items">
+            <article class="deals__item item-deals">
+              <img class="item-deals__image" src="img/modules/deals/01.webp"
+                alt="Woman is smiling on a yellow background">
+              <div class="item-deals__body">
+                <div class="item-deals__label">Low Price</div>
+                <h3 class="item-deals__title">High Coziness</h3>
+                <div class="item-deals__discount">UPTO 50% OFF</div>
+                <a href="#" class="item-deals__link">Explore Items</a>
+              </div>
+            </article>
+            <article class="deals__item item-deals">
+              <img class="item-deals__image" src="img/modules/deals/02.webp"
+                alt="Woman in glasses smiling on a purple background">
+              <div class="item-deals__body">
+                <div class="item-deals__label">Beyoung Presents</div>
+                <h3 class="item-deals__title">Breezy Summer<br>Style</h3>
+                <div class="item-deals__discount">UPTO 50% OFF</div>
+                <a href="#" class="item-deals__link">Explore Items</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <section class="page__new new">
+        <div class="new__container">
+          <h2 class="new__title title-section">New Arrival</h2>
+          <div id="new-splide" class="new__slider splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide slide-new">
+                  <article class="slide-new__item">
+                    <a href="#" class="slide-new__link">
+                      <img src="img/modules/new-arrival/01.webp" alt="Knitted Joggers" class="slide-new__image">
+                      <h4 class="slide-new__title">Knitted Joggers</h4>
+                    </a>
+                  </article>
+                </li>
+                <li class="splide__slide slide-new">
+                  <article class="slide-new__item">
+                    <a href="#" class="slide-new__link">
+                      <img src="img/modules/new-arrival/02.webp" alt="Full Sleeve" class="slide-new__image">
+                      <h4 class="slide-new__title">Full Sleeve</h4>
+                    </a>
+                  </article>
+                </li>
+                <li class="splide__slide slide-new">
+                  <article class="slide-new__item">
+                    <a href="#" class="slide-new__link">
+                      <img src="img/modules/new-arrival/03.webp" alt="Active T-Shirts" class="slide-new__image">
+                      <h4 class="slide-new__title">Active T-Shirts</h4>
+                    </a>
+                  </article>
+                </li>
+                <li class="splide__slide slide-new">
+                  <article class="slide-new__item">
+                    <a href="#" class="slide-new__link">
+                      <img src="img/modules/new-arrival/04.webp" alt="Urban Shirts" class="slide-new__image">
+                      <h4 class="slide-new__title">Urban Shirts</h4>
+                    </a>
+                  </article>
+                </li>
+              </ul>
+            </div>
+            <div class="splide__arrows splide__arrows--new">
+              <button class="splide__arrow splide__arrow--new splide__arrow--prev _icon-a-left"
+                aria-label="Previous slide">
+              </button>
+              <button class="splide__arrow splide__arrow--new splide__arrow--next _icon-a-right"
+                aria-label="Next slide">
+              </button>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <footer class="footer">

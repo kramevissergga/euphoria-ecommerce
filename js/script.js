@@ -95,17 +95,33 @@ let slideToggle = (target, duration = 500) => {
   target.hidden ? slideDown(target, duration) : slideUp(target, duration);
 };
 
-var splide = new Splide(".splide", {
+var splideHero = new Splide("#splide-hero", {
   pagination: true,
   type: `loop`,
   speed: 800,
   autoHeight: true,
-  // autoplay: true,
+  autoplay: true,
   interval: 6000,
   pauseOnHover: true,
   classes: {
-    pagination: "splide__pagination",
-    page: "splide__pagination-page",
+    pagination: "splide__pagination splide__pagination--hero",
+    page: "splide__pagination-page splide__pagination-page--hero",
   },
 });
-splide.mount();
+splideHero.mount();
+
+var splideNew = new Splide("#new-splide", {
+  type: `loop`,
+  speed: 900,
+  perPage: 4,
+  perMove: 1,
+  pagination: false,
+  autoHeight: true,
+  gap: "2.4375rem",
+  breakpoints: {
+    991.98: { perPage: 3, gap: "2rem" },
+    767.98: { perPage: 2, gap: "1.9rem" },
+    500: { perPage: 1.5, gap: "1.5rem" },
+  },
+});
+splideNew.mount();
