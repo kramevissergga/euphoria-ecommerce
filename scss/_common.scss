@@ -18,6 +18,9 @@
     height: toEm(30, 34);
     margin-top: toEm(3, 34);
   }
+  &--margin {
+    @include adaptiveValue("margin-bottom", 70, 20);
+  }
 }
 .item-preview {
   display: grid;
