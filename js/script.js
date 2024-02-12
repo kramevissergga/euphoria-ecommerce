@@ -139,8 +139,8 @@ var splideFeedback = new Splide("#feedback-splide", {
   autoHeight: true,
   gap: "1.4375rem",
   breakpoints: {
-    991.98: { perPage: 2, gap: "2rem" },
-    500: { perPage: 1.5, gap: "1.5rem" },
+    991.98: { perPage: 2 },
+    500: { perPage: 1.2, gap: "0.8rem" },
   },
   classes: {
     pagination: "splide__pagination splide__pagination--feedback",
