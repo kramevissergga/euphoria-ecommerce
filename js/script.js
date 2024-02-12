@@ -125,3 +125,26 @@ var splideNew = new Splide("#new-splide", {
   },
 });
 splideNew.mount();
+
+var splideFeedback = new Splide("#feedback-splide", {
+  type: `loop`,
+  speed: 1000,
+  perPage: 3,
+  perMove: 1,
+  autoplay: true,
+  interval: 4000,
+  pauseOnHover: true,
+  pagination: true,
+  arrows: false,
+  autoHeight: true,
+  gap: "1.4375rem",
+  breakpoints: {
+    991.98: { perPage: 2, gap: "2rem" },
+    500: { perPage: 1.5, gap: "1.5rem" },
+  },
+  classes: {
+    pagination: "splide__pagination splide__pagination--feedback",
+    page: "splide__pagination-page splide__pagination-page--feedback",
+  },
+});
+splideFeedback.mount();
