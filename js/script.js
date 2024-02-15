@@ -145,3 +145,34 @@ var splideFeedback = new Splide("#feedback-splide", {
   },
 });
 splideFeedback.mount();
+
+const ratings = document.querySelectorAll("[data-rating]");
+if (ratings) {
+  ratings.forEach((rating) => {
+    const currentValue = +rating.dataset.rating;
+    currentValue ? starRatingSet(rating, currentValue) : null;
+  });
+}
+
+function starRatingSet(rating, value) {
+  const ratingItems = rating.querySelectorAll(".rating__item");
+  const resultFullItems = parseInt(value);
+  const resultPartItem = value - resultFullItems;
+
+  ratingItems.forEach((ratingItem, index) => {
+    ratingItem.classList.remove("active");
+    ratingItem.querySelector("span")
+      ? ratingItems[index].querySelector("span").remove()
+      : null;
+
+    if (index <= resultFullItems - 1) {
+      ratingItem.classList.add("active");
+    }
+    if (index === resultFullItems && resultPartItem) {
+      ratingItem.insertAdjacentHTML(
+        "beforeend",
+        `<span style="width:${resultPartItem * 100}%"></span>`
+      );
+    }
+  });
+}
