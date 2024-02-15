@@ -2126,16 +2126,17 @@ li .splide__pagination-page.splide__pagination-page--feedback {
 .saving__items {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 1.25rem;
-  margin: 0 -0.625rem;
-}
-.saving__column {
-  padding: 0 0.625rem;
-  flex: 1 0 33.333%;
+  gap: 1.25rem;
 }
 .saving__item {
-  min-width: 17.5rem;
   min-height: 24.5625rem;
+  flex-grow: 1;
+  flex-basis: 18.75rem;
+}
+@media (min-width: 18.75em) {
+  .saving__item {
+    flex-shrink: 0;
+  }
 }
 
 .item-saving {

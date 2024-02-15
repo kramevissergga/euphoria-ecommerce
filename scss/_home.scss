@@ -318,18 +318,19 @@
   &__items {
     display: flex;
     flex-wrap: wrap;
-    row-gap: toRem(20);
-    margin: 0 toRem(-10);
+    gap: toRem(20);
   }
 
   &__column {
-    padding: 0 toRem(10);
-    flex: 1 0 33.333%;
   }
 
   &__item {
-    min-width: toRem(280);
     min-height: toRem(393);
+    flex-grow: 1;
+    flex-basis: toRem(300);
+    @media (min-width: toEm(300)) {
+      flex-shrink: 0;
+    }
   }
 }
 
