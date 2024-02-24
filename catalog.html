@@ -2,194 +2,669 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-  <title>Catalog</title>
+	<title>Catalog</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20240224223917">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-  <div class="wrapper">
-    <header class="header">
-      <div class="header__container">
-        <img src="img/logo.svg" alt="Main logo" class="header__logo">
-        <div class="menu">
-          <nav class="menu__body">
-            <ul class="menu__list">
-              <li class="menu__item">
-                <a href="#" class="menu__link">Shop</a>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__link">Men</a>
-              </li>
-              <li class="menu__item menu__item--active">
-                <a href="#" class="menu__link">Women</a>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__link">Combos</a>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__link">Joggers</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <form class="header__search search" action="#" method="GET">
-          <input class="search__input" placeholder="Search" type="text" required id="searchInput" name="search">
-          <button class="search__button _icon-search" type="submit"></button>
-        </form>
-        <div class="header__actions actions-header">
-          <a href="#" class="actions-header__item _icon-favorite"></a>
-          <a href="#" class="actions-header__item _icon-user"></a>
-          <a href="#" class="actions-header__item _icon-cart"></a>
-        </div>
-        <button class="menu-switch" aria-label="Open/Close menu">
-          <span class="menu-switch__body">
-            <span></span>
-          </span>
-        </button>
-      </div>
-    </header>
-    <main class="page">
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<img src="img/logo.svg" alt="Main logo" class="header__logo">
+				<div class="menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item menu__item--active">
+								<a href="#" class="menu__link">Shop</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Men</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Women</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Combos</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Joggers</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<form class="header__search search" action="#" method="GET">
+					<input class="search__input" placeholder="Search" type="text" required id="searchInput" name="search">
+					<button class="search__button _icon-search" type="submit"></button>
+				</form>
+				<div class="header__actions actions-header">
+					<a href="#" class="actions-header__item _icon-favorite"></a>
+					<a href="#" class="actions-header__item _icon-user"></a>
+					<a href="#" class="actions-header__item _icon-cart"></a>
+				</div>
+				<button class="menu-switch" aria-label="Open/Close menu">
+					<span class="menu-switch__body">
+						<span></span>
+					</span>
+				</button>
+			</div>
+		</header>
+		<main class="page">
+			<div class="page__catalog catalog">
+				<section class="catalog__main">
+					<div class="catalog__container">
+						<aside data-spoilers="991.98,max" class="catalog__filter filter-catalog">
+							<details class="filter-catalog__content">
+								<summary class="filter-catalog__title title-filter-catalog _icon-filter">Filter</summary>
+								<form class="filter-catalog__body" method="GET" action="#">
+									<div class="filter-catalog__section section-filter-catalog">
+										<div class="section-filter-catalog__body">
+											<div class="section-filter-catalog__type type-filter-catalog">
+												<label class="type-filter-catalog__item _icon-ch-right">
+													<input type="checkbox" name="type[]" class="type-filter-catalog__input">
+													Tops
+												</label>
+												<label class="type-filter-catalog__item _icon-ch-right">
+													<input type="checkbox" name="type[]" class="type-filter-catalog__input">
+													Printed T-shirts
+												</label>
+												<label class="type-filter-catalog__item _icon-ch-right">
+													<input type="checkbox" name="type[]" class="type-filter-catalog__input">
+													Plain T-shirts
+												</label>
+												<label class="type-filter-catalog__item _icon-ch-right">
+													<input type="checkbox" name="type[]" class="type-filter-catalog__input">
+													Kurti
+												</label>
+												<label class="type-filter-catalog__item _icon-ch-right">
+													<input type="checkbox" name="type[]" class="type-filter-catalog__input">
+													Boxers
+												</label>
+												<label class="type-filter-catalog__item _icon-ch-right">
+													<input type="checkbox" name="type[]" class="type-filter-catalog__input">
+													Full sleeve T-shirts
+												</label>
+												<label class="type-filter-catalog__item _icon-ch-right">
+													<input type="checkbox" name="type[]" class="type-filter-catalog__input">
+													Joggers
+												</label>
+												<label class="type-filter-catalog__item _icon-ch-right">
+													<input type="checkbox" name="type[]" class="type-filter-catalog__input">
+													Payjamas
+												</label>
+												<label class="type-filter-catalog__item _icon-ch-right">
+													<input type="checkbox" name="type[]" class="type-filter-catalog__input">
+													Jeans
+												</label>
+											</div>
+										</div>
+									</div>
+									<div data-spoilers class="filter-catalog__section section-filter-catalog">
+										<details data-open class="section-filter-catalog__item">
+											<summary class="section-filter-catalog__title title-filter-catalog _icon-ch-down">Price
+											</summary>
+											<div class="section-filter-catalog__body">
+												<div class="section-filter-catalog__price price-filter-catalog">
+													<div id="range" class="price-filter-catalog__range"></div>
+													<div class="price-filter-catalog__inputs">
+														<input type="text" class="price-filter-catalog__input price-filter-catalog__input--min" name="min">
+														<input type="text" class="price-filter-catalog__input price-filter-catalog__input--max" name="max">
+													</div>
 
-    </main>
-    <footer class="footer">
-      <div class="footer__container">
-        <div class="footer__menu menu-footer">
-          <div class="menu-footer__block">
-            <h3 class="menu-footer__title">Need Help</h3>
-            <ul class="menu-footer__list">
-              <li class="menu-footer__item">
-                <a href="#" class="menu-footer__link">Contact Us</a>
-              </li>
-              <li class="menu-footer__item">
-                <a href="#" class="menu-footer__link">Track Order</a>
-              </li>
-              <li class="menu-footer__item">
-                <a href="#" class="menu-footer__link">Returns & Refunds</a>
-              </li>
-              <li class="menu-footer__item">
-                <a href="#" class="menu-footer__link">FAQ's</a>
-              </li>
-              <li class="menu-footer__item">
-                <a href="#" class="menu-footer__link">Career</a>
-              </li>
-            </ul>
+												</div>
+											</div>
+										</details>
+									</div>
+									<div data-spoilers class="filter-catalog__section section-filter-catalog">
+										<details data-open class="section-filter-catalog__item">
+											<summary class="section-filter-catalog__title title-filter-catalog _icon-ch-down">Colors
+											</summary>
+											<div class="section-filter-catalog__body">
+												<div class="section-filter-catalog__colors colors-filter-catalog">
+													<label style="--color: #8434E1" class="colors-filter-catalog__item">
+														Purple
+														<input type="checkbox" name="colors[]" class="colors-filter-catalog__input">
+													</label>
+													<label style="--color: #252525" class="colors-filter-catalog__item">
+														Black
+														<input type="checkbox" name="colors[]" class="colors-filter-catalog__input">
+													</label>
+													<label style="--color: #F35528" class="colors-filter-catalog__item">
+														Red
+														<input type="checkbox" name="colors[]" class="colors-filter-catalog__input">
+													</label>
+													<label style="--color: #F16F2B" class="colors-filter-catalog__item">
+														Orange
+														<input type="checkbox" name="colors[]" class="colors-filter-catalog__input">
+													</label>
+													<label style="--color: #345EFF" class="colors-filter-catalog__item">
+														Navy
+														<input type="checkbox" name="colors[]" class="colors-filter-catalog__input">
+													</label>
+													<label style="--color: #FFFFFF" class="colors-filter-catalog__item">
+														White
+														<input type="checkbox" name="colors[]" class="colors-filter-catalog__input">
+													</label>
+													<label style="--color: #D67E3B" class="colors-filter-catalog__item">
+														Broom
+														<input type="checkbox" name="colors[]" class="colors-filter-catalog__input">
+													</label>
+													<label style="--color: #48BC4E" class="colors-filter-catalog__item">
+														Green
+														<input type="checkbox" name="colors[]" class="colors-filter-catalog__input">
+													</label>
+													<label style="--color: #FDC761" class="colors-filter-catalog__item">
+														Yellow
+														<input type="checkbox" name="colors[]" class="colors-filter-catalog__input">
+													</label>
+													<label style="--color: #E4E5E8" class="colors-filter-catalog__item">
+														Grey
+														<input type="checkbox" name="colors[]" class="colors-filter-catalog__input">
+													</label>
+													<label style="--color: #E08D9D" class="colors-filter-catalog__item">
+														Pink
+														<input type="checkbox" name="colors[]" class="colors-filter-catalog__input">
+													</label>
+													<label style="--color: #3FDEFF" class="colors-filter-catalog__item">
+														Blue
+														<input type="checkbox" name="colors[]" class="colors-filter-catalog__input">
+													</label>
+												</div>
+											</div>
+										</details>
+									</div>
+									<div data-spoilers class="filter-catalog__section section-filter-catalog">
+										<details data-open class="section-filter-catalog__item">
+											<summary class="section-filter-catalog__title title-filter-catalog _icon-ch-down">Size
+											</summary>
+											<div class="section-filter-catalog__body">
+												<div class="section-filter-catalog__size size-filter-catalog">
+													<label class="size-filter-catalog__item">
+														XXS
+														<input type="checkbox" name="size[]" class="size-filter-catalog__input">
+													</label>
+													<label class="size-filter-catalog__item">
+														XL
+														<input type="checkbox" name="size[]" class="size-filter-catalog__input">
+													</label>
+													<label class="size-filter-catalog__item">
+														XS
+														<input type="checkbox" name="size[]" class="size-filter-catalog__input">
+													</label>
+													<label class="size-filter-catalog__item">
+														S
+														<input type="checkbox" name="size[]" class="size-filter-catalog__input">
+													</label>
+													<label class="size-filter-catalog__item">
+														M
+														<input type="checkbox" name="size[]" class="size-filter-catalog__input">
+													</label>
+													<label class="size-filter-catalog__item">
+														L
+														<input type="checkbox" name="size[]" class="size-filter-catalog__input">
+													</label>
+													<label class="size-filter-catalog__item">
+														XXL
+														<input type="checkbox" name="size[]" class="size-filter-catalog__input">
+													</label>
+													<label class="size-filter-catalog__item">
+														3Xl
+														<input type="checkbox" name="size[]" class="size-filter-catalog__input">
+													</label>
+													<label class="size-filter-catalog__item">
+														4XL
+														<input type="checkbox" name="size[]" class="size-filter-catalog__input">
+													</label>
+												</div>
+											</div>
+										</details>
+									</div>
+									<div data-spoilers class="filter-catalog__section section-filter-catalog">
+										<details data-open class="section-filter-catalog__item">
+											<summary class="section-filter-catalog__title title-filter-catalog _icon-ch-down">Dress Style
+											</summary>
+											<div class="section-filter-catalog__body">
+												<div class="section-filter-catalog__style style-filter-catalog">
+													<label class="style-filter-catalog__item _icon-ch-right">
+														<input type="checkbox" name="styles[]" class="style-filter-catalog__input">
+														Classic
+													</label>
+													<label class="style-filter-catalog__item _icon-ch-right">
+														<input type="checkbox" name="styles[]" class="style-filter-catalog__input">
+														Casual
+													</label>
+													<label class="style-filter-catalog__item _icon-ch-right">
+														<input type="checkbox" name="styles[]" class="style-filter-catalog__input">
+														Business
+													</label>
+													<label class="style-filter-catalog__item _icon-ch-right">
+														<input type="checkbox" name="styles[]" class="style-filter-catalog__input">
+														Sport
+													</label>
+													<label class="style-filter-catalog__item _icon-ch-right">
+														<input type="checkbox" name="styles[]" class="style-filter-catalog__input">
+														Elegant
+													</label>
+													<label class="style-filter-catalog__item _icon-ch-right">
+														<input type="checkbox" name="styles[]" class="style-filter-catalog__input">
+														Formal (evening)
+													</label>
+												</div>
+											</div>
+										</details>
+									</div>
+								</form>
+							</details>
+						</aside>
+						<div class="catalog__products products-catalog">
+							<div class="products-catalog__header">
+								<h1 class="products-catalog__title">Women’s Clothing</h1>
+								<ul class="products-catalog__types types-products">
+									<li class="types-products__item">
+										<button class="types-products__button types-products__button--active">New</button>
+									</li>
+									<li class="types-products__item">
+										<button class="types-products__button">Recommended</button>
+									</li>
+								</ul>
+							</div>
+							<div class="products-catalog__items">
+								<article class="item-preview">
+									<button class="item-preview__favorite _icon-favorite" aria-label="Add to favorites"></button>
+									<a class="item-preview__picture-link">
+										<picture><source srcset="img/modules/womens-clothing/01.webp" type="image/webp"><img src="img/modules/womens-clothing/01.webp" alt="Product preview" class="item-preview__image"></picture>
+									</a>
+									<div class="item-preview__body">
+										<h5 class="item-preview__title"><a href="#" class="item-preview__title-link">Black Sweatshirt with
+												Lorem, ipsum dolor</a>
+										</h5>
+										<h5 class="item-preview__label">Jhanvi’s Brand</h5>
+										<div class="item-preview__price">$123.00</div>
+									</div>
+								</article>
+								<article class="item-preview">
+									<button class="item-preview__favorite _icon-favorite" aria-label="Add to favorites"></button>
+									<a class="item-preview__picture-link">
+										<picture><source srcset="img/modules/womens-clothing/02.webp" type="image/webp"><img src="img/modules/womens-clothing/02.webp" alt="Product preview" class="item-preview__image"></picture>
+									</a>
+									<div class="item-preview__body">
+										<h5 class="item-preview__title"><a href="#" class="item-preview__title-link">White T-shirt</a>
+										</h5>
+										<h5 class="item-preview__label">Helen’s Brand</h5>
+										<div class="item-preview__price">$11.00</div>
+									</div>
+								</article>
+								<article class="item-preview">
+									<button class="item-preview__favorite _icon-favorite" aria-label="Add to favorites"></button>
+									<a class="item-preview__picture-link">
+										<picture><source srcset="img/modules/womens-clothing/03.webp" type="image/webp"><img src="img/modules/womens-clothing/03.webp" alt="Product preview" class="item-preview__image"></picture>
+									</a>
+									<div class="item-preview__body">
+										<h5 class="item-preview__title"><a href="#" class="item-preview__title-link">Levender Hoodie with
+												lorem ipsum dolor sit amet</a>
+										</h5>
+										<h5 class="item-preview__label">Nike’s Brand</h5>
+										<div class="item-preview__price">$119.00</div>
+									</div>
+								</article>
+								<article class="item-preview">
+									<button class="item-preview__favorite _icon-favorite" aria-label="Add to favorites"></button>
+									<a class="item-preview__picture-link">
+										<picture><source srcset="img/modules/womens-clothing/04.webp" type="image/webp"><img src="img/modules/womens-clothing/04.webp" alt="Product preview" class="item-preview__image"></picture>
+									</a>
+									<div class="item-preview__body">
+										<h5 class="item-preview__title"><a href="#" class="item-preview__title-link">Leaves Pattern
+												White Lorem ipsum dolor sit amet</a>
+										</h5>
+										<h5 class="item-preview__label">paypal’s Brand</h5>
+										<div class="item-preview__price">$77.00</div>
+									</div>
+								</article>
+								<article class="item-preview">
+									<button class="item-preview__favorite _icon-favorite" aria-label="Add to favorites"></button>
+									<a class="item-preview__picture-link">
+										<picture><source srcset="img/modules/womens-clothing/05.webp" type="image/webp"><img src="img/modules/womens-clothing/05.webp" alt="Product preview" class="item-preview__image"></picture>
+									</a>
+									<div class="item-preview__body">
+										<h5 class="item-preview__title"><a href="#" class="item-preview__title-link">White Graphic Crop
+												Top</a>
+										</h5>
+										<h5 class="item-preview__label">woden’s Brand</h5>
+										<div class="item-preview__price">$29.00</div>
+									</div>
+								</article>
+								<article class="item-preview">
+									<button class="item-preview__favorite _icon-favorite" aria-label="Add to favorites"></button>
+									<a class="item-preview__picture-link">
+										<picture><source srcset="img/modules/womens-clothing/06.webp" type="image/webp"><img src="img/modules/womens-clothing/06.webp" alt="Product preview" class="item-preview__image"></picture>
+									</a>
+									<div class="item-preview__body">
+										<h5 class="item-preview__title"><a href="#" class="item-preview__title-link">Black Shorts</a>
+										</h5>
+										<h5 class="item-preview__label">MM’s Brand</h5>
+										<div class="item-preview__price">$37.00</div>
+									</div>
+								</article>
+								<article class="item-preview">
+									<button class="item-preview__favorite _icon-favorite" aria-label="Add to favorites"></button>
+									<a class="item-preview__picture-link">
+										<picture><source srcset="img/modules/womens-clothing/07.webp" type="image/webp"><img src="img/modules/womens-clothing/07.webp" alt="Product preview" class="item-preview__image"></picture>
+									</a>
+									<div class="item-preview__body">
+										<h5 class="item-preview__title"><a href="#" class="item-preview__title-link">Barboreal Gray Sweats
+												Lorem ipsum dolor sit amet</a>
+										</h5>
+										<h5 class="item-preview__label">Priya’s Brand</h5>
+										<div class="item-preview__price">$77.00</div>
+									</div>
+								</article>
+								<article class="item-preview">
+									<button class="item-preview__favorite _icon-favorite" aria-label="Add to favorites"></button>
+									<a class="item-preview__picture-link">
+										<picture><source srcset="img/modules/womens-clothing/08.webp" type="image/webp"><img src="img/modules/womens-clothing/08.webp" alt="Product preview" class="item-preview__image"></picture>
+									</a>
+									<div class="item-preview__body">
+										<h5 class="item-preview__title"><a href="#" class="item-preview__title-link">Yellow Sweatshirt</a>
+										</h5>
+										<h5 class="item-preview__label">woden’s Brand</h5>
+										<div class="item-preview__price">$29.00</div>
+									</div>
+								</article>
+								<article class="item-preview">
+									<button class="item-preview__favorite _icon-favorite" aria-label="Add to favorites"></button>
+									<a class="item-preview__picture-link">
+										<picture><source srcset="img/modules/womens-clothing/09.webp" type="image/webp"><img src="img/modules/womens-clothing/09.webp" alt="Product preview" class="item-preview__image"></picture>
+									</a>
+									<div class="item-preview__body">
+										<h5 class="item-preview__title"><a href="#" class="item-preview__title-link">Flower Pattern Black C
+												Lorem ipsum dolor sit amet</a>
+										</h5>
+										<h5 class="item-preview__label">MM’s Brand</h5>
+										<div class="item-preview__price">$37.00</div>
+									</div>
+								</article>
+								<article class="item-preview">
+									<button class="item-preview__favorite _icon-favorite" aria-label="Add to favorites"></button>
+									<a class="item-preview__picture-link">
+										<picture><source srcset="img/modules/womens-clothing/10.webp" type="image/webp"><img src="img/modules/womens-clothing/10.webp" alt="Product preview" class="item-preview__image"></picture>
+									</a>
+									<div class="item-preview__body">
+										<h5 class="item-preview__title"><a href="#" class="item-preview__title-link">I Don’t Graphic T-shirt
+											</a>
+										</h5>
+										<h5 class="item-preview__label">Nisargi’s Brand</h5>
+										<div class="item-preview__price">$77.00</div>
+									</div>
+								</article>
+								<article class="item-preview">
+									<button class="item-preview__favorite _icon-favorite" aria-label="Add to favorites"></button>
+									<a class="item-preview__picture-link">
+										<picture><source srcset="img/modules/womens-clothing/11.webp" type="image/webp"><img src="img/modules/womens-clothing/11.webp" alt="Product preview" class="item-preview__image"></picture>
+									</a>
+									<div class="item-preview__body">
+										<h5 class="item-preview__title"><a href="#" class="item-preview__title-link">Blue Flower Print Crop
+												Lorem ipsum dolor sit amet</a>
+										</h5>
+										<h5 class="item-preview__label">Mellon’s Brand</h5>
+										<div class="item-preview__price">$29.00</div>
+									</div>
+								</article>
+								<article class="item-preview">
+									<button class="item-preview__favorite _icon-favorite" aria-label="Add to favorites"></button>
+									<a class="item-preview__picture-link">
+										<picture><source srcset="img/modules/womens-clothing/12.webp" type="image/webp"><img src="img/modules/womens-clothing/12.webp" alt="Product preview" class="item-preview__image"></picture>
+									</a>
+									<div class="item-preview__body">
+										<h5 class="item-preview__title"><a href="#" class="item-preview__title-link">line Pattern Black H
+												Lorem ipsum dolor sit amet</a>
+										</h5>
+										<h5 class="item-preview__label">AS’s Brand</h5>
+										<div class="item-preview__price">$37.00</div>
+									</div>
+								</article>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="catalog__description description-catalog">
+					<div class="description-catalog__container">
+						<h2 class="description-catalog__title title-section">
+							Clothing for Women Online in India
+						</h2>
+						<div class="description-catalog__body">
+							<h3>Reexplore Women's Clothing Collection Online at Euphoria</h3>
+							<p>Women's Clothing – Are you searching for the best website to buy Clothing for Women online in India?
+								Well, your search for the coolest and most stylish womens clothing ends here. From trendy Casual Womens
+								Wear Online shopping to premium quality cotton women's apparel, <strong>Euphoria</strong> has closet of
+								Women Collection
+								covered with the latest and best designs of Women's Clothing Online.</p>
+							<p>Our collection of clothes for women will make you the trendsetter with an iconic resemblance of choice
+								in
+								Womens Wear. </p>
+							<h3>One-Stop Destination to Shop Every Clothing for Women: Euphoria</h3>
+							<p>Today, Clothing for Women is gaining more popularity above all. This is because gone are the days when
+								women were used to carrying uncomfortable fashion. Today, a lady looks prettier when she is in Casual
+								Womens Wear which is a comfortable outfit. Concerning this, <strong>Euphoria</strong> has a big fat
+								range of Stylish
+								Women's Clothing that would make her the winner wherever she goes. </p>
+							<p>Our collection of clothes for women will make you the trendsetter with an iconic resemblance of choice
+								in
+								Womens Wear. It is quite evident to say that there are very few Womens Clothing online stores where you
+								can buy Western Wear for Women comprising the premium material and elegant design that you are always
+								seeking for. Basically, </p>
+						</div>
+						<a href="#" class="description-catalog__link">See More</a>
+					</div>
+				</section>
+				<section class="catalog__best-price best-price-catalog">
+					<div class="best-price-catalog__container">
+						<h3 class="best-price-catalog__title title-section">Buy Women's Clothing at Best Price</h3>
+						<table class="best-price-catalog__table">
+							<tr>
+								<th>Women's Clothing</th>
+								<th>Best Price</th>
+							</tr>
+							<tr>
+								<td>
+									Pick Any 4- Womens Plain T-shirt Combo
+								</td>
+								<td>
+									₹1099
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Pick Any 4- Womens Plain T-shirt Combo
+								</td>
+								<td>
+									₹1099
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Pick Any 4- Womens Plain T-shirt Combo
+								</td>
+								<td>
+									₹1099
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Pick Any 4- Womens Plain T-shirt Combo
+								</td>
+								<td>
+									₹1099
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Pick Any 4- Womens Plain T-shirt Combo
+								</td>
+								<td>
+									₹1099
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Pick Any 4- Womens Plain T-shirt Combo
+								</td>
+								<td>
+									₹1099
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Pick Any 4- Womens Plain T-shirt Combo
+								</td>
+								<td>
+									₹1099
+								</td>
+							</tr>
+						</table>
 
-          </div>
-          <div class="menu-footer__block">
-            <h3 class="menu-footer__title">Company</h3>
-            <ul class="menu-footer__list">
-              <li class="menu-footer__item">
-                <a href="#" class="menu-footer__link">About Us</a>
-              </li>
-              <li class="menu-footer__item">
-                <a href="#" class="menu-footer__link">Euphoria Blog</a>
-              </li>
-              <li class="menu-footer__item">
-                <a href="#" class="menu-footer__link">Euphoriastan</a>
-              </li>
-              <li class="menu-footer__item">
-                <a href="#" class="menu-footer__link">Collaboration</a>
-              </li>
-              <li class="menu-footer__item">
-                <a href="#" class="menu-footer__link">Media</a>
-              </li>
-            </ul>
+					</div>
+				</section>
+			</div>
 
-          </div>
-          <div class="menu-footer__block">
-            <h3 class="menu-footer__title">More Info</h3>
-            <ul class="menu-footer__list">
-              <li class="menu-footer__item">
-                <a href="#" class="menu-footer__link">Term and Conditions</a>
-              </li>
-              <li class="menu-footer__item">
-                <a href="#" class="menu-footer__link">Privacy Policy</a>
-              </li>
-              <li class="menu-footer__item">
-                <a href="#" class="menu-footer__link">Shipping Policy</a>
-              </li>
-              <li class="menu-footer__item">
-                <a href="#" class="menu-footer__link">Sitemap</a>
-              </li>
-            </ul>
+	</div>
+	</section>
+	</main>
+	<footer class="footer">
+		<div class="footer__container">
+			<div class="footer__menu menu-footer">
+				<div class="menu-footer__block">
+					<h3 class="menu-footer__title">Need Help</h3>
+					<ul class="menu-footer__list">
+						<li class="menu-footer__item">
+							<a href="#" class="menu-footer__link">Contact Us</a>
+						</li>
+						<li class="menu-footer__item">
+							<a href="#" class="menu-footer__link">Track Order</a>
+						</li>
+						<li class="menu-footer__item">
+							<a href="#" class="menu-footer__link">Returns & Refunds</a>
+						</li>
+						<li class="menu-footer__item">
+							<a href="#" class="menu-footer__link">FAQ's</a>
+						</li>
+						<li class="menu-footer__item">
+							<a href="#" class="menu-footer__link">Career</a>
+						</li>
+					</ul>
 
-          </div>
-          <div class="menu-footer__block">
-            <h3 class="menu-footer__title">Location</h3>
-            <ul class="menu-footer__list">
-              <li class="menu-footer__item">
-                <a href="mailto:support@euphoria.in" class="menu-footer__link">support@euphoria.in</a>
-              </li>
-              <li class="menu-footer__item">Eklingpura Chouraha, Ahmedabad Main Road
-              </li>
-              <li class="menu-footer__item">(NH 8- Near Mahadev Hotel) Udaipur, India- 313002
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer__body">
-          <div class="footer__social social-footer">
-            <ul class="social-footer__list">
-              <li class="social-footer__item">
-                <a href="#" aria-label="Facebook Link" target="_blank" class="social-footer__link _icon-s-facebook"></a>
-              </li>
-              <li class="social-footer__item">
-                <a href="#" aria-label="Instagram Link" target="_blank"
-                  class="social-footer__link _icon-s-instagram"></a>
-              </li>
-              <li class="social-footer__item">
-                <a href="#" aria-label="Twitter Link" target="_blank" class="social-footer__link _icon-s-twitter"></a>
-              </li>
-              <li class="social-footer__item">
-                <a href="#" aria-label="LinkedIn Link" target="_blank" class="social-footer__link _icon-s-linkedin"></a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer__apps apps-footer">
-            <h3 class="apps-footer__title">Download The App</h3>
-            <div class="apps-footer__items">
-              <a href="#" target="_blank" class="apps-footer__item">
-                <img src="img/g-play.svg" alt="Link to google play">
-              </a>
-              <a href="#" target="_blank" class="apps-footer__item">
-                <img src="img/app-strore.svg" alt="Link to app-strore">
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="footer__popular popular-footer">
-          <h5 data-spoiler class="popular-footer__title">
-            <button class="popular-footer__title-button _icon-ch-down">
-              Popular Categories
-            </button>
-          </h5>
-          <div class="popular-footer__body">
-            <ul class="popular-footer__list">
-              <li class="popular-footer__item">
-                <a href="#" class="popular-footer__link">Men</a>
-              </li>
-              <li class="popular-footer__item">
-                <a href="#" class="popular-footer__link">Women</a>
-              </li>
-              <li class="popular-footer__item">
-                <a href="#" class="popular-footer__link">Other</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer__copyright">
-          Copyright © 2023 Euphoria Folks Pvt Ltd. All rights reserved.
+				</div>
+				<div class="menu-footer__block">
+					<h3 class="menu-footer__title">Company</h3>
+					<ul class="menu-footer__list">
+						<li class="menu-footer__item">
+							<a href="#" class="menu-footer__link">About Us</a>
+						</li>
+						<li class="menu-footer__item">
+							<a href="#" class="menu-footer__link">Euphoria Blog</a>
+						</li>
+						<li class="menu-footer__item">
+							<a href="#" class="menu-footer__link">Euphoriastan</a>
+						</li>
+						<li class="menu-footer__item">
+							<a href="#" class="menu-footer__link">Collaboration</a>
+						</li>
+						<li class="menu-footer__item">
+							<a href="#" class="menu-footer__link">Media</a>
+						</li>
+					</ul>
 
-        </div>
-      </div>
-    </footer>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-  <script src="js/script.js"></script>
+				</div>
+				<div class="menu-footer__block">
+					<h3 class="menu-footer__title">More Info</h3>
+					<ul class="menu-footer__list">
+						<li class="menu-footer__item">
+							<a href="#" class="menu-footer__link">Term and Conditions</a>
+						</li>
+						<li class="menu-footer__item">
+							<a href="#" class="menu-footer__link">Privacy Policy</a>
+						</li>
+						<li class="menu-footer__item">
+							<a href="#" class="menu-footer__link">Shipping Policy</a>
+						</li>
+						<li class="menu-footer__item">
+							<a href="#" class="menu-footer__link">Sitemap</a>
+						</li>
+					</ul>
+
+				</div>
+				<div class="menu-footer__block">
+					<h3 class="menu-footer__title">Location</h3>
+					<ul class="menu-footer__list">
+						<li class="menu-footer__item">
+							<a href="mailto:support@euphoria.in" class="menu-footer__link">support@euphoria.in</a>
+						</li>
+						<li class="menu-footer__item">Eklingpura Chouraha, Ahmedabad Main Road
+						</li>
+						<li class="menu-footer__item">(NH 8- Near Mahadev Hotel) Udaipur, India- 313002
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer__body">
+				<div class="footer__social social-footer">
+					<ul class="social-footer__list">
+						<li class="social-footer__item">
+							<a href="#" aria-label="Facebook Link" target="_blank" class="social-footer__link _icon-s-facebook"></a>
+						</li>
+						<li class="social-footer__item">
+							<a href="#" aria-label="Instagram Link" target="_blank" class="social-footer__link _icon-s-instagram"></a>
+						</li>
+						<li class="social-footer__item">
+							<a href="#" aria-label="Twitter Link" target="_blank" class="social-footer__link _icon-s-twitter"></a>
+						</li>
+						<li class="social-footer__item">
+							<a href="#" aria-label="LinkedIn Link" target="_blank" class="social-footer__link _icon-s-linkedin"></a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__apps apps-footer">
+					<h3 class="apps-footer__title">Download The App</h3>
+					<div class="apps-footer__items">
+						<a href="#" target="_blank" class="apps-footer__item">
+							<img src="img/g-play.svg" alt="Link to google play">
+						</a>
+						<a href="#" target="_blank" class="apps-footer__item">
+							<img src="img/app-strore.svg" alt="Link to app-strore">
+						</a>
+					</div>
+				</div>
+			</div>
+			<div data-spoilers class="footer__popular popular-footer">
+				<details class="popular-footer__item">
+					<summary class="popular-footer__title _icon-ch-down">Popular Categories</summary>
+					<div class="popular-footer__body">
+						<ul class="popular-footer__list">
+							<li class="popular-footer__item">
+								<a href="#" class="popular-footer__link">Men</a>
+							</li>
+							<li class="popular-footer__item">
+								<a href="#" class="popular-footer__link">Women</a>
+							</li>
+							<li class="popular-footer__item">
+								<a href="#" class="popular-footer__link">Other</a>
+							</li>
+						</ul>
+					</div>
+				</details>
+			</div>
+			<div class="footer__copyright">
+				Copyright © 2023 Euphoria Folks Pvt Ltd. All rights reserved.
+
+			</div>
+		</div>
+	</footer>
+	</div>
+	<script src="js/app.min.js?_v=20240224223917"></script>
 </body>
 
 </html>

@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>HomePage</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css?_v=20240224223917" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240224223917">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<img src="img/logo.svg" alt="Main logo" class="header__logo">
+				<div class="menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item menu__item--active">
+								<a href="#" class="menu__link">Shop</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Men</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Women</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Combos</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Joggers</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<form class="header__search search" action="#" method="GET">
+					<input class="search__input" placeholder="Search" type="text" required id="searchInput" name="search">
+					<button class="search__button _icon-search" type="submit"></button>
+				</form>
+				<div class="header__actions actions-header">
+					<a href="#" class="actions-header__item _icon-favorite"></a>
+					<a href="#" class="actions-header__item _icon-user"></a>
+					<a href="#" class="actions-header__item _icon-cart"></a>
+				</div>
+				<button class="menu-switch" aria-label="Open/Close menu">
+					<span class="menu-switch__body">
+						<span></span>
+					</span>
+				</button>
+			</div>
+		</header>
+		<main class="page">
+			<section id="splide-hero" class="page__hero splide">
+				<div class="splide__track">
+					<ul class="splide__list">
+						<li class="splide__slide slide-hero">
+							<div class="slide-hero__container">
+								<div class="slide-hero__body">
+									<div class="slide-hero__label">T-shirt / Tops</div>
+									<h2 class="slide-hero__title">Summer
+										Value <br> Pack</h2>
+									<div class="slide-hero__label">cool / colorful / comfy</div>
+									<a href="#" class="slide-hero__link button button--white">Shop Now</a>
+								</div>
+								<picture><source srcset="img/modules/hero-slider/01.webp" type="image/webp"><img class="slide-hero__image" src="img/modules/hero-slider/01.webp" alt="Woman with packages on a blue background"></picture>
+							</div>
+						</li>
+						<li class="splide__slide slide-hero">
+							<div class="slide-hero__container">
+								<div class="slide-hero__body">
+									<div class="slide-hero__label">Fashion / Style</div>
+									<h2 class="slide-hero__title">Try Our
+										New <br> Costume</h2>
+									<div class="slide-hero__label">best / price / ever</div>
+									<a href="#" class="slide-hero__link button button--white">
+										Shop Now</a>
+								</div>
+								<picture><source srcset="img/modules/hero-slider/02.webp" type="image/webp"><img class="slide-hero__image" src="img/modules/hero-slider/02.webp" alt="Woman with packages"></picture>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="splide__arrows splide__arrows--hero">
+					<button class="splide__arrow splide__arrow--hero splide__arrow--prev _icon-ch-left" aria-label="Previous slide">
+					</button>
+					<button class="splide__arrow splide__arrow--hero splide__arrow--next _icon-ch-right" aria-label="Next slide">
+					</button>
+				</div>
+			</section>
+			<div class="page__deals deals">
+				<div class="deals__container">
+					<div class="deals__items">
+						<article class="deals__item item-deals">
+							<picture><source srcset="img/modules/deals/01.webp" type="image/webp"><img class="item-deals__image" src="img/modules/deals/01.webp" alt="Woman is smiling on a yellow background"></picture>
+							<div class="item-deals__body">
+								<div class="item-deals__label">Low Price</div>
+								<h3 class="item-deals__title">High Coziness</h3>
+								<div class="item-deals__discount">UPTO 50% OFF</div>
+								<a href="#" class="item-deals__link">Explore Items</a>
+							</div>
+						</article>
+						<article class="deals__item item-deals">
+							<picture><source srcset="img/modules/deals/02.webp" type="image/webp"><img class="item-deals__image" src="img/modules/deals/02.webp" alt="Woman in glasses smiling on a purple background"></picture>
+							<div class="item-deals__body">
+								<div class="item-deals__label">Beyoung Presents</div>
+								<h3 class="item-deals__title">Breezy Summer<br>Style</h3>
+								<div class="item-deals__discount">UPTO 50% OFF</div>
+								<a href="#" class="item-deals__link">Explore Items</a>
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+			<section class="page__new new">
+				<div class="new__container">
+					<h2 class="new__title title-section title-section--margin">New Arrival</h2>
+					<div id="new-splide" class="new__slider splide">
+						<div class="splide__track">
+							<ul class="splide__list">
+								<li class="splide__slide slide-new">
+									<article class="slide-new__item">
+										<a href="#" class="slide-new__link">
+											<picture><source srcset="img/modules/new-arrival/01.webp" type="image/webp"><img src="img/modules/new-arrival/01.webp" alt="Knitted Joggers" class="slide-new__image"></picture>
+											<h4 class="slide-new__title">Knitted Joggers</h4>
+										</a>
+									</article>
+								</li>
+								<li class="splide__slide slide-new">
+									<article class="slide-new__item">
+										<a href="#" class="slide-new__link">
+											<picture><source srcset="img/modules/new-arrival/02.webp" type="image/webp"><img src="img/modules/new-arrival/02.webp" alt="Full Sleeve" class="slide-new__image"></picture>
+											<h4 class="slide-new__title">Full Sleeve</h4>
+										</a>
+									</article>
+								</li>
+								<li class="splide__slide slide-new">
+									<article class="slide-new__item">
+										<a href="#" class="slide-new__link">
+											<picture><source srcset="img/modules/new-arrival/03.webp" type="image/webp"><img src="img/modules/new-arrival/03.webp" alt="Active T-Shirts" class="slide-new__image"></picture>
+											<h4 class="slide-new__title">Active T-Shirts</h4>
+										</a>
+									</article>
+								</li>
+								<li class="splide__slide slide-new">
+									<article class="slide-new__item">
+										<a href="#" class="slide-new__link">
+											<picture><source srcset="img/modules/new-arrival/04.webp" type="image/webp"><img src="img/modules/new-arrival/04.webp" alt="Urban Shirts" class="slide-new__image"></picture>
+											<h4 class="slide-new__title">Urban Shirts</h4>
+										</a>
+									</article>
+								</li>
+							</ul>
+						</div>
+						<div class="splide__arrows splide__arrows--new">
+							<button class="splide__arrow splide__arrow--new splide__arrow--prev _icon-a-left" aria-label="Previous slide">
+							</button>
+							<button class="splide__arrow splide__arrow--new splide__arrow--next _icon-a-right" aria-label="Next slide">
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__saving saving">
+				<div class="saving__container">
+					<h2 class="saving__title title-section title-section--margin">Big Saving Zone</h2>
+					<div class="saving__items">
+						<article class="saving__item item-saving">
+							<picture><source srcset="img/modules/big-saving-zone/01.webp" type="image/webp"><img src="img/modules/big-saving-zone/01.webp" alt="Hawaiian Shirts" class="item-saving__image"></picture>
+							<div class="item-saving__body">
+								<h4 class="item-saving__title">
+									Hawaiian<br>
+									Shirts
+								</h4>
+								<div class="item-saving__desc">Dress up in summer vibe</div>
+								<div class="item-saving__sale">UPTO 50% OFF</div>
+								<div class="item-saving__arrow _icon-a-down">
+									<a href="#" class="item-saving__link">SHOP NOW</a>
+								</div>
+							</div>
+						</article>
+						<article class="saving__item item-saving">
+							<picture><source srcset="img/modules/big-saving-zone/02.webp" type="image/webp"><img src="img/modules/big-saving-zone/02.webp" alt="Hawaiian Shirts" class="item-saving__image"></picture>
+							<div class="item-saving__body item-saving__body--right">
+								<div class="item-saving__label">Limited Stock</div>
+								<h4 class="item-saving__title">
+									Printed<br>T-Shirt
+								</h4>
+								<div class="item-saving__desc">New Designs Every Week</div>
+								<div class="item-saving__sale">UPTO 40% OFF</div>
+								<div class="item-saving__arrow _icon-a-down">
+									<a href="#" class="item-saving__link">SHOP NOW</a>
+								</div>
+							</div>
+						</article>
+						<article class="saving__item item-saving">
+							<picture><source srcset="img/modules/big-saving-zone/03.webp" type="image/webp"><img src="img/modules/big-saving-zone/03.webp" alt="Hawaiian Shirts" class="item-saving__image"></picture>
+							<div class="item-saving__body item-saving__body--right item-saving__body--dark">
+								<h4 class="item-saving__title">
+									Cargo<br>Joggers
+								</h4>
+								<div class="item-saving__desc">Move with style & comfort</div>
+								<div class="item-saving__sale">UPTO 50% OFF</div>
+								<div class="item-saving__arrow _icon-a-down">
+									<a href="#" class="item-saving__link">SHOP NOW</a>
+								</div>
+						</article>
+						<article class="saving__item item-saving">
+							<picture><source srcset="img/modules/big-saving-zone/04.webp" type="image/webp"><img src="img/modules/big-saving-zone/04.webp" alt="Hawaiian Shirts" class="item-saving__image"></picture>
+							<div class="item-saving__body item-saving__body--right item-saving__body--dark">
+								<h4 class="item-saving__title">
+									Urban<br>Shirts
+								</h4>
+								<div class="item-saving__desc">Live In Confort</div>
+								<div class="item-saving__sale">FLAT 60% OFF</div>
+								<div class="item-saving__arrow _icon-a-down">
+									<a href="#" class="item-saving__link">SHOP NOW</a>
+								</div>
+							</div>
+						</article>
+						<article class="saving__item item-saving">
+							<picture><source srcset="img/modules/big-saving-zone/05.webp" type="image/webp"><img src="img/modules/big-saving-zone/05.webp" alt="Hawaiian Shirts" class="item-saving__image"></picture>
+							<div class="item-saving__body item-saving__body--right item-saving__body--dark">
+								<h4 class="item-saving__title">
+									Oversized<br>T-Shirts
+								</h4>
+								<div class="item-saving__desc">Street Style Icon</div>
+								<div class="item-saving__sale">FLAT 60% OFF</div>
+								<div class="item-saving__arrow _icon-a-down">
+									<a href="#" class="item-saving__link">SHOP NOW</a>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+
+			</section>
+			<section class="page__we-made we-made">
+				<div class="we-made__container">
+					<div class="we-made__body">
+						<h2 class="we-made__title">WE MADE YOUR EVERYDAY FASHION BETTER!</h2>
+						<div class="we-made__text">
+							<p>
+								In our journey to improve everyday fashion, euphoria presents EVERYDAY wear range - Comfortable &
+								Affordable fashion 24/7
+							</p>
+						</div>
+						<a href="#" class="we-made__link button button--white">
+							Shop Now</a>
+					</div>
+					<picture><source srcset="img/modules/we-made/02.webp" type="image/webp"><img src="img/modules/we-made/02.webp" alt="" class="we-made__image"></picture>
+				</div>
+			</section>
+			<section class="page__products products">
+				<div class="products__container">
+					<h2 class="products__title title-section title-section--margin">Categories For Men</h2>
+					<div class="products__items">
+						<article class="item-preview item-preview--category">
+							<a class="item-preview__picture-link">
+								<picture><source srcset="img/modules/categories-men/01.webp" type="image/webp"><img src="img/modules/categories-men/01.webp" alt="Product preview" class="item-preview__image"></picture>
+							</a>
+							<div class="item-preview__body">
+								<h5 class="item-preview__title"><a href="#" class="item-preview__title-link">Shirts</a></h5>
+								<div class="item-preview__label">Explore Now!</div>
+								<a href="#" class="item-preview__arrow-link _icon-a-right"></a>
+							</div>
+						</article>
+						<article class="item-preview item-preview--category">
+							<a class="item-preview__picture-link">
+								<picture><source srcset="img/modules/categories-men/02.webp" type="image/webp"><img src="img/modules/categories-men/02.webp" alt="Product preview" class="item-preview__image"></picture>
+							</a>
+							<div class="item-preview__body">
+								<h5 class="item-preview__title"><a href="#" class="item-preview__title-link">Printed T-Shirts</a></h5>
+								<div class="item-preview__label">Explore Now!</div>
+								<a href="#" class="item-preview__arrow-link _icon-a-right"></a>
+							</div>
+						</article>
+						<article class="item-preview item-preview--category">
+							<a class="item-preview__picture-link">
+								<picture><source srcset="img/modules/categories-men/03.webp" type="image/webp"><img src="img/modules/categories-men/03.webp" alt="Product preview" class="item-preview__image"></picture>
+							</a>
+							<div class="item-preview__body">
+								<h5 class="item-preview__title"><a href="#" class="item-preview__title-link">Plain T-Shirt</a></h5>
+								<div class="item-preview__label">Explore Now!</div>
+								<a href="#" class="item-preview__arrow-link _icon-a-right"></a>
+							</div>
+						</article>
+						<article class="item-preview item-preview--category">
+							<a class="item-preview__picture-link">
+								<picture><source srcset="img/modules/categories-men/04.webp" type="image/webp"><img src="img/modules/categories-men/04.webp" alt="Product preview" class="item-preview__image"></picture>
+							</a>
+							<div class="item-preview__body">
+								<h5 class="item-preview__title"><a href="#" class="item-preview__title-link">Polo T-Shirt</a></h5>
+								<div class="item-preview__label">Explore Now!</div>
+								<a href="#" class="item-preview__arrow-link _icon-a-right"></a>
+							</div>
+						</article>
+						<article class="item-preview item-preview--category">
+							<a class="item-preview__picture-link">
+								<picture><source srcset="img/modules/categories-men/05.webp" type="image/webp"><img src="img/modules/categories-men/05.webp" alt="Product preview" class="item-preview__image"></picture>
+							</a>
+							<div class="item-preview__body">
+								<h5 class="item-preview__title"><a href="#" class="item-preview__title-link">Hoodies & Sweetshirt</a>
+								</h5>
+								<div class="item-preview__label">Explore Now!</div>
+								<a href="#" class="item-preview__arrow-link _icon-a-right"></a>
+							</div>
+						</article>
+						<article class="item-preview item-preview--category">
+							<a class="item-preview__picture-link">
+								<picture><source srcset="img/modules/categories-men/06.webp" type="image/webp"><img src="img/modules/categories-men/06.webp" alt="Product preview" class="item-preview__image"></picture>
+							</a>
+							<div class="item-preview__body">
+								<h5 class="item-preview__title"><a href="#" class="item-preview__title-link">Jeans</a></h5>
+								<div class="item-preview__label">Explore Now!</div>
+								<a href="#" class="item-preview__arrow-link _icon-a-right"></a>
+							</div>
+						</article>
+						<article class="item-preview item-preview--category">
+							<a class="item-preview__picture-link">
+								<picture><source srcset="img/modules/categories-men/07.webp" type="image/webp"><img src="img/modules/categories-men/07.webp" alt="Product preview" class="item-preview__image"></picture>
+							</a>
+							<div class="item-preview__body">
+								<h5 class="item-preview__title"><a href="#" class="item-preview__title-link">Activewear</a></h5>
+								<div class="item-preview__label">Explore Now!</div>
+								<a href="#" class="item-preview__arrow-link _icon-a-right"></a>
+							</div>
+						</article>
+						<article class="item-preview item-preview--category">
+							<a class="item-preview__picture-link">
+								<picture><source srcset="img/modules/categories-men/08.webp" type="image/webp"><img src="img/modules/categories-men/08.webp" alt="Product preview" class="item-preview__image"></picture>
+							</a>
+							<div class="item-preview__body">
+								<h5 class="item-preview__title"><a href="#" class="item-preview__title-link">Boxers</a></h5>
+								<div class="item-preview__label">Explore Now!</div>
+								<a href="#" class="item-preview__arrow-link _icon-a-right"></a>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+			<section class="page__products products">
+				<div class="products__container">
+					<h2 class="products__title title-section title-section--margin">Categories For Women</h2>
+					<div class="products__items">
+						<article class="item-preview item-preview--category">
+							<a class="item-preview__picture-link">
+								<picture><source srcset="img/modules/categories-women/01.webp" type="image/webp"><img src="img/modules/categories-women/01.webp" alt="Product preview" class="item-preview__image"></picture>
+							</a>
+							<div class="item-preview__body">
+								<h5 class="item-preview__title"><a href="#" class="item-preview__title-link">Hoodies & Sweetshirt</a>
+								</h5>
+								<div class="item-preview__label">Explore Now!</div>
+								<a href="#" class="item-preview__arrow-link _icon-a-right"></a>
+							</div>
+						</article>
+						<article class="item-preview item-preview--category">
+							<a class="item-preview__picture-link">
+								<picture><source srcset="img/modules/categories-women/02.webp" type="image/webp"><img src="img/modules/categories-women/02.webp" alt="Product preview" class="item-preview__image"></picture>
+							</a>
+							<div class="item-preview__body">
+								<h5 class="item-preview__title"><a href="#" class="item-preview__title-link">Coats & Parkas</a></h5>
+								<div class="item-preview__label">Explore Now!</div>
+								<a href="#" class="item-preview__arrow-link _icon-a-right"></a>
+							</div>
+						</article>
+						<article class="item-preview item-preview--category">
+							<a class="item-preview__picture-link">
+								<picture><source srcset="img/modules/categories-women/03.webp" type="image/webp"><img src="img/modules/categories-women/03.webp" alt="Product preview" class="item-preview__image"></picture>
+							</a>
+							<div class="item-preview__body">
+								<h5 class="item-preview__title"><a href="#" class="item-preview__title-link">Tees & T-Shirt</a></h5>
+								<div class="item-preview__label">Explore Now!</div>
+								<a href="#" class="item-preview__arrow-link _icon-a-right"></a>
+							</div>
+						</article>
+						<article class="item-preview item-preview--category">
+							<a class="item-preview__picture-link">
+								<picture><source srcset="img/modules/categories-women/04.webp" type="image/webp"><img src="img/modules/categories-women/04.webp" alt="Product preview" class="item-preview__image"></picture>
+							</a>
+							<div class="item-preview__body">
+								<h5 class="item-preview__title"><a href="#" class="item-preview__title-link">Boxers</a></h5>
+								<div class="item-preview__label">Explore Now!</div>
+								<a href="#" class="item-preview__arrow-link _icon-a-right"></a>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+			<section class="page__top-brands top-brands">
+				<div class="top-brands__container">
+					<div class="top-brands__body">
+						<h2 class="top-brands__title">Top Brands Deal</h2>
+						<div class="top-brands__label">
+							Up To <span>60%</span> off on brands
+						</div>
+						<div class="top-brands__items">
+							<a href="#" target="_blank" class="top-brands__link">
+								<picture><source srcset="img/modules/top-brands/01.webp" type="image/webp"><img src="img/modules/top-brands/01.webp" alt="Nike" class="top-brands__image"></picture>
+							</a>
+							<a href="#" target="_blank" class="top-brands__link">
+								<picture><source srcset="img/modules/top-brands/02.webp" type="image/webp"><img src="img/modules/top-brands/02.webp" alt="H&M" class="top-brands__image"></picture>
+							</a>
+							<a href="#" target="_blank" class="top-brands__link">
+								<picture><source srcset="img/modules/top-brands/03.webp" type="image/webp"><img src="img/modules/top-brands/03.webp" alt="Levi`s" class="top-brands__image"></picture>
+							</a>
+							<a href="#" target="_blank" class="top-brands__link">
+								<picture><source srcset="img/modules/top-brands/04.webp" type="image/webp"><img src="img/modules/top-brands/04.webp" alt="U.S POLO ASSN." class="top-brands__image"></picture>
+							</a>
+							<a href="#" target="_blank" class="top-brands__link">
+								<picture><source srcset="img/modules/top-brands/05.webp" type="image/webp"><img src="img/modules/top-brands/05.webp" alt="Puma" class="top-brands__image"></picture>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__products products">
+				<div class="products__container">
+					<h2 class="products__title title-section title-section--margin">In The Limelight</h2>
+					<div class="products__items">
+						<article class="item-preview">
+							<button class="item-preview__favorite _icon-favorite" aria-label="Add to favorites"></button>
+							<a class="item-preview__picture-link">
+								<picture><source srcset="img/modules/limelight/01.webp" type="image/webp"><img src="img/modules/limelight/01.webp" alt="Product preview" class="item-preview__image"></picture>
+							</a>
+							<div class="item-preview__body">
+								<h5 class="item-preview__title"><a href="#" class="item-preview__title-link">Black Sweatshirt with
+										Lorem, ipsum dolor</a>
+								</h5>
+								<h5 class="item-preview__label">Jhanvi’s Brand</h5>
+								<div class="item-preview__price">$123.00</div>
+							</div>
+						</article>
+						<article class="item-preview">
+							<button class="item-preview__favorite _icon-favorite" aria-label="Add to favorites"></button>
+							<a class="item-preview__picture-link">
+								<picture><source srcset="img/modules/limelight/02.webp" type="image/webp"><img src="img/modules/limelight/02.webp" alt="Product preview" class="item-preview__image"></picture>
+							</a>
+							<div class="item-preview__body">
+								<h5 class="item-preview__title"><a href="#" class="item-preview__title-link">line Pattern Black
+										Hlorem</a></h5>
+								<div class="item-preview__label">AS’s Brand</div>
+								<div class="item-preview__price">$37.00</div>
+							</div>
+						</article>
+						<article class="item-preview">
+							<button class="item-preview__favorite _icon-favorite" aria-label="Add to favorites"></button>
+							<a class="item-preview__picture-link">
+								<picture><source srcset="img/modules/limelight/03.webp" type="image/webp"><img src="img/modules/limelight/03.webp" alt="Product preview" class="item-preview__image"></picture>
+							</a>
+							<div class="item-preview__body">
+								<h5 class="item-preview__title"><a href="#" class="item-preview__title-link">Black Sweatshirt with
+										Lorem, ipsum dolor</a>
+								</h5>
+								<h5 class="item-preview__label">Jhanvi’s Brand</h5>
+								<div class="item-preview__price">$123.00</div>
+							</div>
+						</article>
+						<article class="item-preview">
+							<button class="item-preview__favorite _icon-favorite" aria-label="Add to favorites"></button>
+							<a class="item-preview__picture-link">
+								<picture><source srcset="img/modules/limelight/04.webp" type="image/webp"><img src="img/modules/limelight/04.webp" alt="Product preview" class="item-preview__image"></picture>
+							</a>
+							<div class="item-preview__body">
+								<h5 class="item-preview__title"><a href="#" class="item-preview__title-link">Levender Hoodie with Lorem,
+										ipsum dolor</a></h5>
+								<div class="item-preview__label">Explore Now!</div>
+								<div class="item-preview__price">$119.00</div>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+			<section class="page__feedback feedback">
+				<div class="feedback__container">
+					<h2 class="feedback__title title-section title-section--margin">Feedback</h2>
+					<div id="feedback-splide" class="feedback__slider splide">
+						<div class="splide__track">
+							<ul class="splide__list">
+								<li class="splide__slide slide-feedback">
+									<div class="slide-feedback__item item-feedback">
+										<div class="item-feedback__header">
+											<picture><source srcset="img/modules/feedback/01.webp" type="image/webp"><img src="img/modules/feedback/01.webp" alt="User picture" class="item-feedback__image"></picture>
+											<div data-rating="" data-rating-value="3.5" class="rating"></div>
+										</div>
+										<h4 class="item-feedback__title">Floyd Miles</h4>
+										<div class="item-feedback__text">
+											<p>
+												Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+												consequat duis enim velit mollit.
+											</p>
+											<p>
+												Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit
+												aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam
+												consequat sunt nostrud amet.
+											</p>
+										</div>
+									</div>
+								</li>
+								<li class="splide__slide slide-feedback">
+									<div class="slide-feedback__item item-feedback">
+										<div class="item-feedback__header">
+											<picture><source srcset="img/modules/feedback/02.webp" type="image/webp"><img src="img/modules/feedback/02.webp" alt="User picture" class="item-feedback__image"></picture>
+											<div data-rating="" data-rating-value="4" class="rating"></div>
+										</div>
+										<h4 class="item-feedback__title">Ronald Richards</h4>
+										<div class="item-feedback__text">
+											<p>
+												ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+												Exercitation veniam consequat sunt nostrud amet.
+											</p>
+										</div>
+									</div>
+								</li>
+								<li class="splide__slide slide-feedback">
+									<div class="slide-feedback__item item-feedback">
+										<div class="item-feedback__header">
+											<picture><source srcset="img/modules/feedback/03.webp" type="image/webp"><img src="img/modules/feedback/03.webp" alt="User picture" class="item-feedback__image"></picture>
+											<div data-rating data-rating-value="3.5" class="rating"></div>
+										</div>
+										<h4 class="item-feedback__title">Savannah Nguyen</h4>
+										<div class="item-feedback__text">
+											<p>
+												Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+												consequat duis enim velit mollit.
+											</p>
+											<p>
+												Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit
+												aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam
+												consequat sunt nostrud amet.
+											</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<ul class="splide__pagination splide__pagination--feedback"></ul>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__menu menu-footer">
+					<div class="menu-footer__block">
+						<h3 class="menu-footer__title">Need Help</h3>
+						<ul class="menu-footer__list">
+							<li class="menu-footer__item">
+								<a href="#" class="menu-footer__link">Contact Us</a>
+							</li>
+							<li class="menu-footer__item">
+								<a href="#" class="menu-footer__link">Track Order</a>
+							</li>
+							<li class="menu-footer__item">
+								<a href="#" class="menu-footer__link">Returns & Refunds</a>
+							</li>
+							<li class="menu-footer__item">
+								<a href="#" class="menu-footer__link">FAQ's</a>
+							</li>
+							<li class="menu-footer__item">
+								<a href="#" class="menu-footer__link">Career</a>
+							</li>
+						</ul>
+
+					</div>
+					<div class="menu-footer__block">
+						<h3 class="menu-footer__title">Company</h3>
+						<ul class="menu-footer__list">
+							<li class="menu-footer__item">
+								<a href="#" class="menu-footer__link">About Us</a>
+							</li>
+							<li class="menu-footer__item">
+								<a href="#" class="menu-footer__link">Euphoria Blog</a>
+							</li>
+							<li class="menu-footer__item">
+								<a href="#" class="menu-footer__link">Euphoriastan</a>
+							</li>
+							<li class="menu-footer__item">
+								<a href="#" class="menu-footer__link">Collaboration</a>
+							</li>
+							<li class="menu-footer__item">
+								<a href="#" class="menu-footer__link">Media</a>
+							</li>
+						</ul>
+
+					</div>
+					<div class="menu-footer__block">
+						<h3 class="menu-footer__title">More Info</h3>
+						<ul class="menu-footer__list">
+							<li class="menu-footer__item">
+								<a href="#" class="menu-footer__link">Term and Conditions</a>
+							</li>
+							<li class="menu-footer__item">
+								<a href="#" class="menu-footer__link">Privacy Policy</a>
+							</li>
+							<li class="menu-footer__item">
+								<a href="#" class="menu-footer__link">Shipping Policy</a>
+							</li>
+							<li class="menu-footer__item">
+								<a href="#" class="menu-footer__link">Sitemap</a>
+							</li>
+						</ul>
+
+					</div>
+					<div class="menu-footer__block">
+						<h3 class="menu-footer__title">Location</h3>
+						<ul class="menu-footer__list">
+							<li class="menu-footer__item">
+								<a href="mailto:support@euphoria.in" class="menu-footer__link">support@euphoria.in</a>
+							</li>
+							<li class="menu-footer__item">Eklingpura Chouraha, Ahmedabad Main Road
+							</li>
+							<li class="menu-footer__item">(NH 8- Near Mahadev Hotel) Udaipur, India- 313002
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__body">
+					<div class="footer__social social-footer">
+						<ul class="social-footer__list">
+							<li class="social-footer__item">
+								<a href="#" aria-label="Facebook Link" target="_blank" class="social-footer__link _icon-s-facebook"></a>
+							</li>
+							<li class="social-footer__item">
+								<a href="#" aria-label="Instagram Link" target="_blank" class="social-footer__link _icon-s-instagram"></a>
+							</li>
+							<li class="social-footer__item">
+								<a href="#" aria-label="Twitter Link" target="_blank" class="social-footer__link _icon-s-twitter"></a>
+							</li>
+							<li class="social-footer__item">
+								<a href="#" aria-label="LinkedIn Link" target="_blank" class="social-footer__link _icon-s-linkedin"></a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__apps apps-footer">
+						<h3 class="apps-footer__title">Download The App</h3>
+						<div class="apps-footer__items">
+							<a href="#" target="_blank" class="apps-footer__item">
+								<img src="img/g-play.svg" alt="Link to google play">
+							</a>
+							<a href="#" target="_blank" class="apps-footer__item">
+								<img src="img/app-strore.svg" alt="Link to app-strore">
+							</a>
+						</div>
+					</div>
+				</div>
+				<div data-spoilers class="footer__popular popular-footer">
+					<details class="popular-footer__item">
+						<summary class="popular-footer__title _icon-ch-down">Popular Categories</summary>
+						<div class="popular-footer__body">
+							<ul class="popular-footer__list">
+								<li class="popular-footer__item">
+									<a href="#" class="popular-footer__link">Men</a>
+								</li>
+								<li class="popular-footer__item">
+									<a href="#" class="popular-footer__link">Women</a>
+								</li>
+								<li class="popular-footer__item">
+									<a href="#" class="popular-footer__link">Other</a>
+								</li>
+							</ul>
+						</div>
+					</details>
+				</div>
+				<div class="footer__copyright">
+					Copyright © 2023 Euphoria Folks Pvt Ltd. All rights reserved.
+
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20240224223917"></script>
+</body>
+
+</html>
