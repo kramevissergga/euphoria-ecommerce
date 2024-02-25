@@ -1866,6 +1866,7 @@ li .splide__pagination-page.splide__pagination-page--feedback {
 .filter-catalog {
   border-right: .0625rem solid rgba(190,188,189,.4);
   border-bottom: .0625rem solid rgba(190,188,189,.4);
+  border-top: .0625rem solid rgba(190,188,189,.4);
   border-radius: 0 0 .125rem .125rem;
   border-left: .0625rem solid rgba(190,188,189,.4)
 }
@@ -1880,6 +1881,9 @@ li .splide__pagination-page.splide__pagination-page--feedback {
 }
 .filter-catalog__title::before {
   font-size: .9375rem
+}
+.filter-catalog__section:last-child .section-filter-catalog__body {
+  border-bottom: none
 }
 .section-filter-catalog__body {
   padding: 2.5rem 1.9375rem;
@@ -1906,6 +1910,9 @@ li .splide__pagination-page.splide__pagination-page--feedback {
 .section-filter-catalog__title._spoiler-active::before {
   -webkit-transform: rotate(-180deg);
   transform: rotate(-180deg)
+}
+.filter-catalog__section[data-spoilers]:last-child:not(:has(._spoiler-active)) .section-filter-catalog__title {
+  border-bottom: none
 }
 .type-filter-catalog {
   display: grid;
@@ -2626,7 +2633,10 @@ li .splide__pagination-page.splide__pagination-page--feedback {
   }
 }
 @media (max-width:61.99875em) {
-  .filter-catalog[data-spoilers]:not(:has(._spoiler-active)) {
+  .filter-catalog {
+    margin-top: .625rem
+  }
+  .filter-catalog[data-spoilers]:not(:has(.filter-catalog__title._spoiler-active)) {
     border-bottom: none;
     border-radius: 0
   }
