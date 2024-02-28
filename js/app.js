@@ -13,6 +13,13 @@
             document.documentElement.classList.add(className);
         }));
     }
+    function functions_getHash() {
+        if (location.hash) return location.hash.replace("#", "");
+    }
+    function setHash(hash) {
+        hash = hash ? `#${hash}` : window.location.href.split("#")[0];
+        history.pushState("", "", hash);
+    }
     let _slideUp = (target, duration = 500, showmore = 0) => {
         if (!target.classList.contains("_slide")) {
             target.classList.add("_slide");
@@ -228,6 +235,99 @@
             }
         }
     }
+    function tabs() {
+        const tabs = document.querySelectorAll("[data-tabs]");
+        let tabsActiveHash = [];
+        if (tabs.length > 0) {
+            const hash = functions_getHash();
+            if (hash && hash.startsWith("tab-")) tabsActiveHash = hash.replace("tab-", "").split("-");
+            tabs.forEach(((tabsBlock, index) => {
+                tabsBlock.classList.add("_tab-init");
+                tabsBlock.setAttribute("data-tabs-index", index);
+                tabsBlock.addEventListener("click", setTabsAction);
+                initTabs(tabsBlock);
+            }));
+            let mdQueriesArray = dataMediaQueries(tabs, "tabs");
+            if (mdQueriesArray && mdQueriesArray.length) mdQueriesArray.forEach((mdQueriesItem => {
+                mdQueriesItem.matchMedia.addEventListener("change", (function() {
+                    setTitlePosition(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
+                }));
+                setTitlePosition(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
+            }));
+        }
+        function setTitlePosition(tabsMediaArray, matchMedia) {
+            tabsMediaArray.forEach((tabsMediaItem => {
+                tabsMediaItem = tabsMediaItem.item;
+                let tabsTitles = tabsMediaItem.querySelector("[data-tabs-titles]");
+                let tabsTitleItems = tabsMediaItem.querySelectorAll("[data-tabs-title]");
+                let tabsContent = tabsMediaItem.querySelector("[data-tabs-body]");
+                let tabsContentItems = tabsMediaItem.querySelectorAll("[data-tabs-item]");
+                tabsTitleItems = Array.from(tabsTitleItems).filter((item => item.closest("[data-tabs]") === tabsMediaItem));
+                tabsContentItems = Array.from(tabsContentItems).filter((item => item.closest("[data-tabs]") === tabsMediaItem));
+                tabsContentItems.forEach(((tabsContentItem, index) => {
+                    if (matchMedia.matches) {
+                        tabsContent.append(tabsTitleItems[index]);
+                        tabsContent.append(tabsContentItem);
+                        tabsMediaItem.classList.add("_tab-spoiler");
+                    } else {
+                        tabsTitles.append(tabsTitleItems[index]);
+                        tabsMediaItem.classList.remove("_tab-spoiler");
+                    }
+                }));
+            }));
+        }
+        function initTabs(tabsBlock) {
+            let tabsTitles = tabsBlock.querySelectorAll("[data-tabs-titles]>*");
+            let tabsContent = tabsBlock.querySelectorAll("[data-tabs-body]>*");
+            const tabsBlockIndex = tabsBlock.dataset.tabsIndex;
+            const tabsActiveHashBlock = tabsActiveHash[0] == tabsBlockIndex;
+            if (tabsActiveHashBlock) {
+                const tabsActiveTitle = tabsBlock.querySelector("[data-tabs-titles]>._tab-active");
+                tabsActiveTitle ? tabsActiveTitle.classList.remove("_tab-active") : null;
+            }
+            if (tabsContent.length) tabsContent.forEach(((tabsContentItem, index) => {
+                tabsTitles[index].setAttribute("data-tabs-title", "");
+                tabsContentItem.setAttribute("data-tabs-item", "");
+                if (tabsActiveHashBlock && index == tabsActiveHash[1]) tabsTitles[index].classList.add("_tab-active");
+                tabsContentItem.hidden = !tabsTitles[index].classList.contains("_tab-active");
+            }));
+        }
+        function setTabsStatus(tabsBlock) {
+            let tabsTitles = tabsBlock.querySelectorAll("[data-tabs-title]");
+            let tabsContent = tabsBlock.querySelectorAll("[data-tabs-item]");
+            const tabsBlockIndex = tabsBlock.dataset.tabsIndex;
+            function isTabsAnamate(tabsBlock) {
+                if (tabsBlock.hasAttribute("data-tabs-animate")) return tabsBlock.dataset.tabsAnimate > 0 ? Number(tabsBlock.dataset.tabsAnimate) : 500;
+            }
+            const tabsBlockAnimate = isTabsAnamate(tabsBlock);
+            if (tabsContent.length > 0) {
+                const isHash = tabsBlock.hasAttribute("data-tabs-hash");
+                tabsContent = Array.from(tabsContent).filter((item => item.closest("[data-tabs]") === tabsBlock));
+                tabsTitles = Array.from(tabsTitles).filter((item => item.closest("[data-tabs]") === tabsBlock));
+                tabsContent.forEach(((tabsContentItem, index) => {
+                    if (tabsTitles[index].classList.contains("_tab-active")) {
+                        if (tabsBlockAnimate) _slideDown(tabsContentItem, tabsBlockAnimate); else tabsContentItem.hidden = false;
+                        if (isHash && !tabsContentItem.closest(".popup")) setHash(`tab-${tabsBlockIndex}-${index}`);
+                    } else if (tabsBlockAnimate) _slideUp(tabsContentItem, tabsBlockAnimate); else tabsContentItem.hidden = true;
+                }));
+            }
+        }
+        function setTabsAction(e) {
+            const el = e.target;
+            if (el.closest("[data-tabs-title]")) {
+                const tabTitle = el.closest("[data-tabs-title]");
+                const tabsBlock = tabTitle.closest("[data-tabs]");
+                if (!tabTitle.classList.contains("_tab-active") && !tabsBlock.querySelector("._slide")) {
+                    let tabActiveTitle = tabsBlock.querySelectorAll("[data-tabs-title]._tab-active");
+                    tabActiveTitle.length ? tabActiveTitle = Array.from(tabActiveTitle).filter((item => item.closest("[data-tabs]") === tabsBlock)) : null;
+                    tabActiveTitle.length ? tabActiveTitle[0].classList.remove("_tab-active") : null;
+                    tabTitle.classList.add("_tab-active");
+                    setTabsStatus(tabsBlock);
+                }
+                e.preventDefault();
+            }
+        }
+    }
     function menuInit() {
         if (document.querySelector(".menu-switch")) document.addEventListener("click", (function(e) {
             if (bodyLockStatus && e.target.closest(".menu-switch")) {
@@ -363,13 +463,14 @@
             }
         }
         function formRatingInit(rating, ratingSize) {
+            const ratingItemsEl = rating.querySelector(".rating__items");
             let ratingItems = ``;
             for (let index = 0; index < ratingSize; index++) {
-                index === 0 ? ratingItems += `<div class="rating__items">` : null;
+                index === 0 && !ratingItemsEl ? ratingItems += `<div class="rating__items">` : null;
                 ratingItems += `\n\t\t\t\t<label class="rating__item">\n\t\t\t\t\t<input class="rating__input" type="radio" name="rating" value="${index + 1}">\n\t\t\t\t</label>`;
-                index === ratingSize ? ratingItems += `</div">` : null;
+                index === ratingSize && !ratingItemsEl ? ratingItems += `</div">` : null;
             }
-            rating.insertAdjacentHTML("beforeend", ratingItems);
+            ratingItemsEl ? ratingItemsEl.insertAdjacentHTML("beforeend", ratingItems) : rating.insertAdjacentHTML("beforeend", ratingItems);
         }
         function formRatingGet(rating, ratingValue) {
             const resultRating = ratingValue;
@@ -4729,6 +4830,48 @@
         });
         splideFeedback.mount();
     }
+    document.addEventListener("DOMContentLoaded", (function() {}));
+    const gallerySliderEl = document.getElementById("gallery-slider");
+    const galleryThumbnailsEl = document.getElementById("gallery-thumbnails");
+    if (gallerySliderEl && galleryThumbnailsEl) {
+        var gallerySlider = new Splide("#gallery-slider", {
+            type: "fade",
+            pagination: false,
+            arrows: false
+        });
+        var galleryThumbnails = new Splide("#gallery-thumbnails", {
+            rewind: true,
+            perPage: 3,
+            autoHeight: true,
+            isNavigation: true,
+            gap: 18,
+            direction: "ttb",
+            height: 269,
+            width: "",
+            focus: "center",
+            pagination: false,
+            cover: true,
+            dragMinThreshold: {
+                mouse: 4,
+                touch: 10
+            }
+        });
+        var mainSliderImages = gallerySliderEl.querySelectorAll(".slide-gallery__image");
+        var thumbnailsList = galleryThumbnailsEl.querySelector(".splide__list");
+        mainSliderImages.forEach((function(image) {
+            var slide = document.createElement("li");
+            slide.classList.add("splide__slide", "thumbnails-slide-gallery");
+            var thumbnailImage = document.createElement("img");
+            thumbnailImage.src = image.src;
+            thumbnailImage.alt = image.alt;
+            thumbnailImage.classList.add("thumbnails-slide-gallery__image", "ibg");
+            slide.appendChild(thumbnailImage);
+            thumbnailsList.appendChild(slide);
+        }));
+        gallerySlider.sync(galleryThumbnails);
+        gallerySlider.mount();
+        galleryThumbnails.mount();
+    }
     let addWindowScrollEvent = false;
     setTimeout((() => {
         if (addWindowScrollEvent) {
@@ -4742,5 +4885,6 @@
     isWebp();
     menuInit();
     spoilers();
+    tabs();
     formRating();
 })();
