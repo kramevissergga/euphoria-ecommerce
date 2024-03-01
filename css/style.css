@@ -541,7 +541,7 @@ h6 {
 .select--header .select__value:after {
   font-family: icons;
   content: "\e906";
-  font-size: .3125rem
+  font-size: .625rem
 }
 .select__value._select-pseudo-label::before {
   content: attr(data-pseudo-label);
@@ -552,9 +552,6 @@ h6 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap
-}
-.select--header .select__content {
-  flex-basis: 10.625rem
 }
 .select__text {
   flex: 1 1 auto;
@@ -1293,12 +1290,12 @@ h6 {
   padding: .3125rem;
   flex-shrink: 0;
   font-size: 1.25rem;
-  justify-self: end
+  justify-self: end;
+  transition: all .3s
 }
 .lang-open .lang-switch {
   background-color: #8a33fd;
-  color: #fff;
-  transition: all .3s
+  color: #fff
 }
 .lang-open .lang-switch::before {
   content: "\e91a"
