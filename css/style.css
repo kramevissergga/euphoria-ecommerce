@@ -1195,9 +1195,6 @@ h6 {
   -webkit-transform: translateX(10%);
   transform: translateX(10%)
 }
-.lang-open .search {
-  display: none
-}
 .search__button {
   position: absolute;
   top: 0;
@@ -3382,6 +3379,9 @@ li .splide__pagination-page.splide__pagination-page--feedback {
   }
   .lang-open .select--header .select__body {
     display: block
+  }
+  .lang-open .search {
+    display: none
   }
   .footer__body {
     flex-direction: column;
