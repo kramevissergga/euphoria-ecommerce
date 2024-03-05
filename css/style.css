@@ -2657,13 +2657,9 @@ li .splide__pagination-page.splide__pagination-page--feedback {
 .sign-in__container::before {
   content: ""
 }
-.sign-in__image {
+.sign-in__picture {
   height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: top;
-  object-position: top
+  width: 100%
 }
 .sign-in__body {
   display: grid
@@ -2784,7 +2780,7 @@ li .splide__pagination-page.splide__pagination-page--feedback {
   .sign-in__container {
     grid-template-columns: repeat(2,1fr)
   }
-  .sign-in__image {
+  .sign-in__picture {
     position: absolute;
     top: 0;
     left: 0;
@@ -3514,8 +3510,8 @@ li .splide__pagination-page.splide__pagination-page--feedback {
   .desc-product__tabs:not(:last-child) {
     margin-bottom: 1.25rem
   }
-  .sign-in__image {
-    aspect-ratio: 9/6
+  .sign-in__picture {
+    aspect-ratio: 9/5
   }
 }
 @media (max-width:40.625em) {
