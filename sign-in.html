@@ -6,8 +6,8 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css?_v=20240305191500" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240305191500">
+	<link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css?_v=20240305213730" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240305213730">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,7 +43,7 @@
 					<div class="sign-in__picture">
 						<picture><source srcset="img/modules/account/sign-in.webp" type="image/webp"><img src="img/modules/account/sign-in.webp" alt="Sign In image" class="ibg ibg--top"></picture>
 					</div>
-					<form method="post" enctype="multipart/form-data" class="sign-in__body">
+					<form action="#" method="post" enctype="multipart/form-data" class="sign-in__body">
 						<h1 class="sign-in__title title-auth">Sign In Page</h1>
 						<div class="social-login">
 							<a href="#" class="social-login__item button button--border">
@@ -59,14 +59,14 @@
 						<div class="inputs-login">
 							<div class="inputs-login__item">
 								<label for="username-input" class="inputs-login__label">User name or email address</label>
-								<input type="text" name="username" id="username-input" class="inputs-login__input">
+								<input type="text" required name="username" id="username-input" class="inputs-login__input">
 							</div>
 							<div class="inputs-login__item">
 								<div class="inputs-login__header">
 									<label for="password-input" class="inputs-login__label">Password</label>
 									<button type="button" data-hide data-input-id="password-input" class="inputs-login__hide _icon-eye-hide">Hide</button>
 								</div>
-								<input type="password" name="password" id="password-input" class="inputs-login__input">
+								<input type="password" required name="password" id="password-input" class="inputs-login__input">
 								<a href="#" class="inputs-login__link">Forget your password</a>
 							</div>
 							<div class="sign-in__actions">
@@ -79,7 +79,7 @@
 			</section>
 		</main>
 	</div>
-	<script src="js/app.min.js?_v=20240305191500"></script>
+	<script src="js/app.min.js?_v=20240305213730"></script>
 </body>
 
 </html>
