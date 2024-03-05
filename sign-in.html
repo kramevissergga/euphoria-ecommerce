@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-	<title>Product</title>
+	<title>Sign In</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css?_v=20240304132714" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240304132714">
+	<link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css?_v=20240305185654" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240305185654">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,138 +38,46 @@
 			</div>
 		</header>
 		<main class="page">
+			<section class="sign-in">
+				<div class="sign-in__container">
+					<picture><source srcset="img/modules/account/sign-in.webp" type="image/webp"><img src="img/modules/account/sign-in.webp" alt="Sign In image" class="sign-in__image"></picture>
+					<form method="post" enctype="multipart/form-data" class="sign-in__body">
+						<h1 class="sign-in__title title-auth">Sign In Page</h1>
+						<div class="social-login">
+							<a href="#" class="social-login__item button button--border">
+								<img src="img/icons/google.svg" alt="Image">
+								Continue With Google
+							</a>
+							<a href="#" class="social-login__item button button--border">
+								<img src="img/icons/twitter.svg" alt="Image">
+								Continue With Twitter
+							</a>
+						</div>
+						<div class="sign-in__or-label">OR</div>
+						<div class="inputs-login">
+							<div class="inputs-login__item">
+								<label for="username-input" class="inputs-login__label">User name or email address</label>
+								<input type="text" name="username" id="username-input" class="inputs-login__input">
+							</div>
+							<div class="inputs-login__item">
+								<div class="inputs-login__header">
+									<label for="password-input" class="inputs-login__label">Password</label>
+									<button type="button" data-hide data-input-id="password-input" class="inputs-login__hide _icon-eye-hide">Hide</button>
+								</div>
+								<input type="password" name="password" id="password-input" class="inputs-login__input">
+								<a href="#" class="inputs-login__link">Forget your password</a>
+							</div>
+							<div class="sign-in__actions">
+								<button class="sign-in__button button">Sign In</button>
+								<div class="sign-in__label">Don’t have an account? <a href="#" class="sign-in__link">Sign up</a></div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</section>
 		</main>
-		<footer class="footer">
-			<div class="footer__container">
-				<div class="footer__menu menu-footer">
-					<div class="menu-footer__block">
-						<h3 class="menu-footer__title">Need Help</h3>
-						<ul class="menu-footer__list">
-							<li class="menu-footer__item">
-								<a href="#" class="menu-footer__link">Contact Us</a>
-							</li>
-							<li class="menu-footer__item">
-								<a href="#" class="menu-footer__link">Track Order</a>
-							</li>
-							<li class="menu-footer__item">
-								<a href="#" class="menu-footer__link">Returns & Refunds</a>
-							</li>
-							<li class="menu-footer__item">
-								<a href="#" class="menu-footer__link">FAQ's</a>
-							</li>
-							<li class="menu-footer__item">
-								<a href="#" class="menu-footer__link">Career</a>
-							</li>
-						</ul>
-
-					</div>
-					<div class="menu-footer__block">
-						<h3 class="menu-footer__title">Company</h3>
-						<ul class="menu-footer__list">
-							<li class="menu-footer__item">
-								<a href="#" class="menu-footer__link">About Us</a>
-							</li>
-							<li class="menu-footer__item">
-								<a href="#" class="menu-footer__link">Euphoria Blog</a>
-							</li>
-							<li class="menu-footer__item">
-								<a href="#" class="menu-footer__link">Euphoriastan</a>
-							</li>
-							<li class="menu-footer__item">
-								<a href="#" class="menu-footer__link">Collaboration</a>
-							</li>
-							<li class="menu-footer__item">
-								<a href="#" class="menu-footer__link">Media</a>
-							</li>
-						</ul>
-
-					</div>
-					<div class="menu-footer__block">
-						<h3 class="menu-footer__title">More Info</h3>
-						<ul class="menu-footer__list">
-							<li class="menu-footer__item">
-								<a href="#" class="menu-footer__link">Term and Conditions</a>
-							</li>
-							<li class="menu-footer__item">
-								<a href="#" class="menu-footer__link">Privacy Policy</a>
-							</li>
-							<li class="menu-footer__item">
-								<a href="#" class="menu-footer__link">Shipping Policy</a>
-							</li>
-							<li class="menu-footer__item">
-								<a href="#" class="menu-footer__link">Sitemap</a>
-							</li>
-						</ul>
-
-					</div>
-					<div class="menu-footer__block">
-						<h3 class="menu-footer__title">Location</h3>
-						<ul class="menu-footer__list">
-							<li class="menu-footer__item">
-								<a href="mailto:support@euphoria.in" class="menu-footer__link">support@euphoria.in</a>
-							</li>
-							<li class="menu-footer__item">Eklingpura Chouraha, Ahmedabad Main Road
-							</li>
-							<li class="menu-footer__item">(NH 8- Near Mahadev Hotel) Udaipur, India- 313002
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="footer__body">
-					<div class="footer__social social-footer">
-						<ul class="social-footer__list">
-							<li class="social-footer__item">
-								<a href="#" aria-label="Facebook Link" target="_blank" class="social-footer__link _icon-s-facebook"></a>
-							</li>
-							<li class="social-footer__item">
-								<a href="#" aria-label="Instagram Link" target="_blank" class="social-footer__link _icon-s-instagram"></a>
-							</li>
-							<li class="social-footer__item">
-								<a href="#" aria-label="Twitter Link" target="_blank" class="social-footer__link _icon-s-twitter"></a>
-							</li>
-							<li class="social-footer__item">
-								<a href="#" aria-label="LinkedIn Link" target="_blank" class="social-footer__link _icon-s-linkedin"></a>
-							</li>
-						</ul>
-					</div>
-					<div class="footer__apps apps-footer">
-						<h3 class="apps-footer__title">Download The App</h3>
-						<div class="apps-footer__items">
-							<a href="#" target="_blank" class="apps-footer__item">
-								<img src="img/g-play.svg" alt="Link to google play">
-							</a>
-							<a href="#" target="_blank" class="apps-footer__item">
-								<img src="img/app-strore.svg" alt="Link to app-strore">
-							</a>
-						</div>
-					</div>
-				</div>
-				<div data-spoilers class="footer__popular popular-footer">
-					<details class="popular-footer__item">
-						<summary class="popular-footer__title _icon-ch-down">Popular Categories</summary>
-						<div class="popular-footer__body">
-							<ul class="popular-footer__list">
-								<li class="popular-footer__item">
-									<a href="#" class="popular-footer__link">Men</a>
-								</li>
-								<li class="popular-footer__item">
-									<a href="#" class="popular-footer__link">Women</a>
-								</li>
-								<li class="popular-footer__item">
-									<a href="#" class="popular-footer__link">Other</a>
-								</li>
-							</ul>
-						</div>
-					</details>
-				</div>
-				<div class="footer__copyright">
-					Copyright © 2023 Euphoria Folks Pvt Ltd. All rights reserved.
-
-				</div>
-			</div>
-		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20240304132714"></script>
+	<script src="js/app.min.js?_v=20240305185654"></script>
 </body>
 
 </html>

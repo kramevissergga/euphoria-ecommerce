@@ -5317,6 +5317,15 @@
     if (document.querySelector(".lang-switch")) document.addEventListener("click", (function(e) {
         if (e.target.closest(".lang-switch")) document.documentElement.classList.toggle("lang-open");
     }));
+    var hideButtons = document.querySelectorAll("[data-hide]");
+    if (hideButtons) hideButtons.forEach((function(button) {
+        button.addEventListener("click", (function() {
+            var inputId = this.dataset.inputId;
+            var inputElement = document.getElementById(inputId);
+            if (inputElement.type === "text") inputElement.type = "password"; else inputElement.type = "text";
+            button.classList.toggle("show");
+        }));
+    }));
     window["FLS"] = true;
     isWebp();
     menuInit();
