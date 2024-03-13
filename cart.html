@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Add to cart</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css?_v=20240313200709" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240313200709">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<img src="img/logo.svg" alt="Main logo" class="header__logo">
+				<div class="menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item menu__item--active">
+								<a href="home.html" class="menu__link">Shop</a>
+							</li>
+							<li class="menu__item">
+								<a href="catalog.html" class="menu__link">Men</a>
+							</li>
+							<li class="menu__item">
+								<a href="catalog.html" class="menu__link">Women</a>
+							</li>
+							<li class="menu__item">
+								<a href="catalog.html" class="menu__link">Combos</a>
+							</li>
+							<li class="menu__item">
+								<a href="catalog.html" class="menu__link">Joggers</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<form class="header__search search" action="#" method="GET">
+					<input class="search__input" placeholder="Search" type="text" required id="searchInput" name="search">
+					<button class="search__button _icon-search" type="submit"></button>
+				</form>
+				<div class="header__actions actions-header">
+					<a href="#" class="actions-header__item _icon-favorite"></a>
+					<a href="#" class="actions-header__item _icon-user"></a>
+					<a href="#" class="actions-header__item _icon-cart"></a>
+				</div>
+				<button class="menu-switch" aria-label="Open/Close menu">
+					<span class="menu-switch__body">
+						<span></span>
+					</span>
+				</button>
+			</div>
+		</header>
+		<main class="page">
+			<div class="page__cart cart">
+				<div class="cart__container">
+					<div class="cart__info info-cart">
+						<ul class="info-cart__breadcrumps breadcrumps">
+							<li class="breadcrumps__item"><a href="home.html" class="breadcrumps__link">Home</a></li>
+							<li class="breadcrumps__item breadcrumps__item--active"><a href="#" class="breadcrumps__link">Add To
+									Cart</a></li>
+						</ul>
+						<div class="info-cart__text">
+							<p>
+								Please fill in the fields below and click place order to complete your purchase!
+							</p>
+							<p>
+								Already
+								registered? <a class="info-cart__link" href="sign-in.html">Please login here</a>
+							</p>
+						</div>
+					</div>
+					<div class="cart__table">
+						<table class="table-cart">
+							<tr>
+								<th>Product Details</th>
+								<th>Price</th>
+								<th>Quantity</th>
+								<th>Shipping</th>
+								<th>Subtotal</th>
+								<th>Action</th>
+							</tr>
+							<tr>
+								<td>
+									<article class="table-cart__product product-cart">
+										<a class="product-cart__link-image">
+											<picture><source data-srcset="img/modules/limelight/01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/modules/limelight/01.webp" src="img/modules/limelight/01.webp" alt="Product image" class="ibg"></picture>
+										</a>
+										<div class="product-cart__body">
+											<h4 class="product-cart__title"><a href="#" target="_blank" class="product-cart__link-title">Blue
+													Flower Print Crop Top</a></h4>
+											<div class="product-cart__label">Color : Yellow</div>
+											<div class="product-cart__label">Size : M</div>
+										</div>
+
+									</article>
+								</td>
+								<td>
+									<div class="table-cart__text">$29.00</div>
+								</td>
+								<td>
+									<div data-quantity class="quantity">
+										<button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
+										<div class="quantity__input">
+											<input data-quantity-value autocomplete="off" readonly type="text" name="form[]" value="1">
+										</div>
+										<button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
+									</div>
+								</td>
+								<td>
+									<div class="table-cart__text table-cart__text--light">FREE</div>
+								</td>
+								<td>
+									<div class="table-cart__text">$29.00</div>
+								</td>
+								<td>
+									<button type="button" class="table-cart__button _icon-trash" aria-label="Delete"></button>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<article class="table-cart__product product-cart">
+										<a class="product-cart__link-image">
+											<picture><source data-srcset="img/modules/limelight/02.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/modules/limelight/02.webp" src="img/modules/limelight/02.webp" alt="Product image" class="ibg"></picture>
+										</a>
+										<div class="product-cart__body">
+											<h4 class="product-cart__title"><a href="#" target="_blank" class="product-cart__link-title">Levender Hoodie</a></h4>
+											<div class="product-cart__label">Color : Levender</div>
+											<div class="product-cart__label">Size : XXL</div>
+										</div>
+
+									</article>
+								</td>
+								<td>
+									<div class="table-cart__text">$119.00</div>
+								</td>
+								<td>
+									<div data-quantity class="quantity">
+										<button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
+										<div class="quantity__input">
+											<input data-quantity-value autocomplete="off" readonly min="1" type="text" name="form[]" value="1">
+										</div>
+										<button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
+									</div>
+								</td>
+								<td>
+									<div class="table-cart__text table-cart__text--light">FREE</div>
+								</td>
+								<td>
+									<div class="table-cart__text">$119.00</div>
+								</td>
+								<td>
+									<button type="button" class="table-cart__button _icon-trash" aria-label="Delete"></button>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<article class="table-cart__product product-cart">
+										<a class="product-cart__link-image">
+											<picture><source data-srcset="img/modules/limelight/03.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/modules/limelight/03.webp" src="img/modules/limelight/03.webp" alt="Product image" class="ibg"></picture>
+										</a>
+										<div class="product-cart__body">
+											<h4 class="product-cart__title"><a href="#" target="_blank" class="product-cart__link-title">Blue
+													Flower Print Crop Top</a></h4>
+											<div class="product-cart__label">Color : Black</div>
+											<div class="product-cart__label">Size : XXL</div>
+										</div>
+
+									</article>
+								</td>
+								<td>
+									<div class="table-cart__text">$123.00</div>
+								</td>
+								<td>
+									<div data-quantity class="quantity">
+										<button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
+										<div class="quantity__input">
+											<input data-quantity-value autocomplete="off" readonly min="1" type="text" name="form[]" value="1">
+										</div>
+										<button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
+									</div>
+								</td>
+								<td>
+									<div class="table-cart__text table-cart__text--light">$5.00</div>
+								</td>
+								<td>
+									<div class="table-cart__text">$127.00</div>
+								</td>
+								<td>
+									<button type="button" class="table-cart__button _icon-trash" aria-label="Delete"></button>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="cart__checkout checkout-cart">
+					<div class="checkout-cart__container">
+						<div class="checkout-cart__coupon coupon-checkout">
+							<h4 class="coupon-checkout__title">Discount Codes</h4>
+							<div class="coupon-checkout__text">
+								<p>
+									Enter your coupon code if you have one
+								</p>
+							</div>
+							<form action="#" method="post" enctype="multipart/form-data" class="coupon-checkout__apply">
+								<input type="text" required class="coupon-checkout__input">
+								<button type="submit" class=" button coupon-checkout__submit">Apply Coupon</button>
+							</form>
+							<a href="#" class="coupon-checkout__link button button--white">Continue Shopping</a>
+						</div>
+						<div class="checkout-cart__proceed proceed-checkout">
+							<div class="proceed-checkout__prices prices-proceed">
+								<div class="prices-proceed__items">
+									<div class="prices-proceed__item">
+										Sub Total
+									</div>
+									<div class="prices-proceed__item">$513.00</div>
+									<div class="prices-proceed__item">
+										Shipping
+									</div>
+									<div class="prices-proceed__item">$5.00</div>
+									<div class="prices-proceed__item prices-proceed__item--total">Grand Total</div>
+									<div class="prices-proceed__item prices-proceed__item--total">$518.00</div>
+								</div>
+							</div>
+							<button class="proceed-checkout__button button">Proceed To Checkout</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</main>
+	</div>
+	<script src="js/app.min.js?_v=20240313200709"></script>
+</body>
+
+</html>
