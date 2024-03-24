@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Check Out</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20240324030929">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<img src="img/logo.svg" alt="Main logo" class="header__logo">
+				<div class="menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item menu__item--active">
+								<a href="home.html" class="menu__link">Shop</a>
+							</li>
+							<li class="menu__item">
+								<a href="catalog.html" class="menu__link">Men</a>
+							</li>
+							<li class="menu__item">
+								<a href="catalog.html" class="menu__link">Women</a>
+							</li>
+							<li class="menu__item">
+								<a href="catalog.html" class="menu__link">Combos</a>
+							</li>
+							<li class="menu__item">
+								<a href="catalog.html" class="menu__link">Joggers</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<form class="header__search search" action="#" method="GET">
+					<input class="search__input" placeholder="Search" type="text" required id="searchInput" name="search">
+					<button class="search__button _icon-search" type="submit"></button>
+				</form>
+				<div class="header__actions actions-header">
+					<a href="#" class="actions-header__item _icon-favorite"></a>
+					<a href="#" class="actions-header__item _icon-user"></a>
+					<a href="#" class="actions-header__item _icon-cart"></a>
+				</div>
+				<button class="menu-switch" aria-label="Open/Close menu">
+					<span class="menu-switch__body">
+						<span></span>
+					</span>
+				</button>
+			</div>
+		</header>
+		<main class="page">
+			<section class="page__check-out check-out">
+				<div class="check-out__container">
+					<div class="check-out__body">
+						<ul class="check-out__breadcrumps breadcrumps">
+							<li class="breadcrumps__item"><a href="home.html" class="breadcrumps__link">Home</a></li>
+							<li class="breadcrumps__item breadcrumps__item--active"><a href="#" class="breadcrumps__link">My
+									Account</a>
+							</li>
+							<li class="breadcrumps__item breadcrumps__item--active"><a href="#" class="breadcrumps__link">Check
+									Out</a>
+							</li>
+						</ul>
+						<h1 class="check-out__title title-section">Check Out</h1>
+
+						<form action="#" method="post" enctype="multipart/form-data" class="check-out__billing-form billing-form">
+							<h3 class="billing-form__title title-form">Billing Details
+							</h3>
+							<div class="billing-form__items">
+								<div class="billing-form__item input-item input-item">
+									<label for="firstName" class="input-item__label">First Name*</label>
+									<input type="text" required id="firstName" name="firstName" placeholder="First Name" class="input-item__input">
+								</div>
+								<div class="billing-form__item input-item">
+									<label for="lastName" class="input-item__label">Last Name*</label>
+									<input type="text" placeholder="Last Name" required name="lastName" id="lastName" class="input-item__input">
+								</div>
+								<div class="billing-form__item input-item">
+									<label for="region" class="input-item__label">Country / Region*</label>
+									<input type="text" placeholder="Country / Region" required name="region" id="region" class="input-item__input">
+								</div>
+								<div class="billing-form__item input-item">
+									<label for="company" class="input-item__label">Company Name</label>
+									<input type="text" placeholder="Company (optional)" name="company" id="company" class="input-item__input">
+								</div>
+								<div class="billing-form__item input-item">
+									<label for="street" class="input-item__label">Street Address*</label>
+									<input type="text" placeholder="House number and street name" required name="street" id="street" class="input-item__input">
+								</div>
+								<div class="billing-form__item input-item">
+									<label for="apt" class="input-item__label">Apt, suite, unit</label>
+									<input placeholder="apartment, suite, unit, etc. (optional)" type="text" name="apt" id="apt" class="input-item__input">
+								</div>
+								<div class="billing-form__item billing-form__item--short input-item">
+									<label for="city" class="input-item__label">City*</label>
+									<input placeholder="Town / City" type="text" required name="city" id="city" class="input-item__input">
+								</div>
+								<div class="billing-form__item billing-form__item--short input-item">
+									<label for="state" class="input-item__label">State*</label>
+									<select name="form[]" data-class-modif="input-item">
+										<option value="" selected>State</option>
+										<option value="2">Oklahoma</option>
+										<option value="3">Texas</option>
+									</select>
+								</div>
+								<div class="billing-form__item billing-form__item--short input-item">
+									<label for="postalCode" class="input-item__label">Postal Code*</label>
+									<input type="number" placeholder="Postal Code" required name="postalCode" id="postalCode" class="input-item__input">
+								</div>
+								<div class="billing-form__item input-item">
+									<label for="phone" class="input-item__label">Phone*</label>
+									<input type="tel" placeholder="Phone" required name="phone" id="phone" class="input-item__input">
+								</div>
+							</div>
+							<button class="billing-form__button button">Continue to delivery</button>
+							<div class="billing-form__checkbox checkbox">
+								<input type="checkbox" id="check-out-save-info" class="checkbox__input">
+								<label for="check-out-save-info" class="checkbox__label">Save my information for a faster
+									checkout</label>
+							</div>
+						</form>
+						<form action="#" method="POST" enctype="multipart/form-data" class="check-out__shipping-form shipping-form">
+							<div class="shipping-form__header header-form">
+								<h3 class="shipping-form__title title-form">Shipping Address</h3>
+								<div class="shipping-form__text text-form">
+									<p>
+										Select the address that matches your card or payment method.
+									</p>
+								</div>
+							</div>
+							<div class="info-block-check-out">
+								<div class="info-block-check-out__body">
+									<div class="info-block-check-out__item">
+										<div class="radiobox">
+											<div class="radiobox__content">
+												<input type="radio" checked name="shipping-address" id="same" value="same" class="radiobox__input">
+												<label for="same" class="label-form">Same as Billing address</label>
+											</div>
+										</div>
+									</div>
+									<div class="info-block-check-out__item">
+										<div class="radiobox">
+											<div class="radiobox__content">
+												<input type="radio" name="shipping-address" id="diff" value="diff" class="radiobox__input">
+												<label for="diff" class="label-form">Use a different shipping address</label>
+											</div>
+											<div class="radiobox__body">
+												<picture><source srcset="img/modules/jujutsu/01.webp" type="image/webp"><img src="img/modules/jujutsu/01.webp" style="max-width: 9rem;" alt="Jujutsu Kaisen" class="ibg"></picture>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+						<div class="check-out__shipping-method shipping-method">
+							<div class="shipping-method__header header-form">
+								<h3 class="shipping-method__title title-form">Shipping Method</h3>
+							</div>
+							<div class="info-block-check-out">
+								<div class="info-block-check-out__body">
+									<div class="info-block-check-out__item">
+										<div class="label-form">Arrives by Monday, June 7</div>
+									</div>
+									<div class="info-block-check-out__item info-block-check-out__item--flex">
+										<div class="label-form label-form--grow">
+											Delivery Charges
+											<span>Additional fess may apply</span>
+										</div>
+										<div class="label-form">
+											$5.00
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<form action="#" method="POST" enctype="multipart/form-data" class="check-out__payment-form payment-form">
+							<div class="payment-form__header header-form">
+								<h3 class="payment-form__title title-form">Payment Method</h3>
+								<div class="payment-form__text text-form">
+									<p>
+										All transactions are secure and encrypted.
+									</p>
+								</div>
+							</div>
+							<div class="payment-form__info-block info-block-check-out">
+								<div class="info-block-check-out__body">
+									<div class="info-block-check-out__item">
+										<div class="radiobox">
+											<div class="radiobox__content">
+												<input type="radio" checked name="payment-method" id="card" value="card" class="radiobox__input">
+												<label for="card" class="label-form">Credit Card
+													<span>We accept all major credit cards.</span>
+												</label>
+											</div>
+											<div class="radiobox__body">
+												<div class="credit-card">
+													<ul class="credit-card__list">
+														<li class="credit-card__item">
+															<a href="#" class="credit-card__image-link"><img src="img/modules/payment/01.svg" alt="G-Pay" class="credit-card__image ibg"></a>
+														</li>
+														<li class="credit-card__item">
+															<a href="#" class="credit-card__image-link"><img src="img/modules/payment/02.svg" alt="Visa" class="credit-card__image"></a>
+														</li>
+														<li class="credit-card__item">
+															<a href="#" class="credit-card__image-link"><img src="img/modules/payment/03.svg" alt="Pay Pal" class="credit-card__image"></a>
+														</li>
+														<li class="credit-card__item">
+															<a href="#" class="credit-card__image-link"><img src="img/modules/payment/04.svg" alt="Pay Pass" class="credit-card__image"></a>
+														</li>
+													</ul>
+													<div class="credit-card__inputs">
+														<input type="text" required name="card-number" pattern="\d*" title="Please enter digits only" placeholder="Card number" class="credit-card__input">
+														<input type="text" required pattern="[A-Za-z\s]*" title="Please enter letters and spaces only" name="card-name" placeholder="Name of card" class="credit-card__input">
+														<input type="text" required name="card-exp-date" pattern="\d{2}/\d{2}" title="Please enter expiration date in MM/YY format" placeholder="Expiration date (MM/YY)" class="credit-card__input">
+														<div class="credit-card__password-box">
+															<input type="password" pattern="\d*" title="Please enter digits only" id="card-code" name="card-code" required placeholder="Security Code" class="credit-card__input">
+															<button type="button" data-hide data-input-id="card-code" class="credit-card__hide _icon-eye" aria-label="Show security code"></button>
+														</div>
+
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="info-block-check-out__item">
+										<div class="radiobox">
+											<div class="radiobox__content">
+												<input type="radio" name="payment-method" id="cash" value="diff" class="radiobox__input">
+												<label for="cash" class="label-form">Cash on delivery <span>Pay with cash upon
+														delivery.</span></label>
+											</div>
+										</div>
+									</div>
+									<div class="info-block-check-out__item">
+										<div class="radiobox">
+											<div class="radiobox__content">
+												<input type="radio" name="payment-method" id="paypal" value="paypal" class="radiobox__input">
+												<label for="paypal" class="label-form">Paypal</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<button class="button" type="Submit">Pay Now</button>
+						</form>
+					</div>
+					<div class="check-out__summary summary-c">
+						<h3 class="summary-c__title">Order Summary</h3>
+						<div class="summary-c__product product-summary-c">
+							<a href="#" class="product-summary-c__image-link">
+								<picture><source data-srcset="img/modules/limelight/01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  src="img/modules/limelight/01.webp" data-src="img/modules/limelight/01.webp" alt="Product" class="ibg"></picture>
+							</a>
+							<div class="product-summary-c__info">
+								<h4 class="product-summary-c__name">
+									<a href="#" class="product-summary-c__link-name">Blue Flower Print Crop Top</a> <span>x 1</span>
+								</h4>
+								<div class="product-summary-c__color">Color : <span>Yellow</span></div>
+							</div>
+							<div class="product-summary-c__price">$29.00</div>
+
+						</div>
+						<div class="summary-c__product product-summary-c">
+							<a href="#" class="product-summary-c__image-link">
+								<picture><source data-srcset="img/modules/limelight/02.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  src="img/modules/limelight/02.webp" data-src="img/modules/limelight/02.webp" alt="Product" class="ibg"></picture>
+							</a>
+							<div class="product-summary-c__info">
+								<h4 class="product-summary-c__name">
+									<a href="#" class="product-summary-c__link-name">Levender Hoodie</a> <span>x 2</span>
+								</h4>
+								<div class="product-summary-c__color">Color : <span>Levender</span></div>
+							</div>
+							<div class="product-summary-c__price">$119.00</div>
+
+						</div>
+						<div class="summary-c__product product-summary-c">
+							<a href="#" class="product-summary-c__image-link">
+								<picture><source data-srcset="img/modules/limelight/03.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  src="img/modules/limelight/03.webp" data-src="img/modules/limelight/03.webp" alt="Product" class="ibg"></picture>
+							</a>
+							<div class="product-summary-c__info">
+								<h4 class="product-summary-c__name">
+									<a href="#" class="product-summary-c__link-name">Black Sweatshirt</a> <span>x 2</span>
+								</h4>
+								<div class="product-summary-c__color">Color : <span>Black</span></div>
+							</div>
+							<div class="product-summary-c__price">$123.00</div>
+
+						</div>
+						<div class="summary-c__price-block">
+							<div class="summary-c__price-item">Subtotal <span>( 3 items )</span></div>
+							<div class="summary-c__price-item">$513.00</div>
+							<div class="summary-c__price-item">Savings</div>
+							<div class="summary-c__price-item">-$30.00</div>
+						</div>
+						<div class="summary-c__price-block">
+							<div class="summary-c__price-item">Shipping</div>
+							<div class="summary-c__price-item">-$5.00</div>
+						</div>
+						<div class="summary-c__price-block">
+							<div class="summary-c__price-item">Total</div>
+							<div class="summary-c__price-item">$478.00</div>
+						</div>
+					</div>
+				</div>
+
+	</div>
+	</section>
+	</main>
+	</div>
+	<script src="js/app.min.js?_v=20240324030929"></script>
+</body>
+
+</html>

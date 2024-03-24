@@ -587,6 +587,11 @@
                                 }
                             }
                         }
+                        if (el.closest("summary").getAttribute("data-for")) {
+                            const inputId = el.closest("summary").getAttribute("data-for");
+                            const targetInput = document.getElementById(inputId);
+                            if (targetInput && targetInput.type === "radio") targetInput.checked = true;
+                        }
                     }
                     if (!el.closest("[data-spoilers]")) {
                         const spoilersClose = document.querySelectorAll("[data-spoiler-close]");
