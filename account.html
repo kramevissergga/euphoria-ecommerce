@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240330215854">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240404194512">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,9 +43,9 @@
 					<button class="search__button _icon-search" type="submit"></button>
 				</form>
 				<div class="header__actions actions-header">
-					<a href="#" class="actions-header__item _icon-favorite"></a>
-					<a href="#" class="actions-header__item _icon-user"></a>
-					<a href="#" class="actions-header__item _icon-cart"></a>
+					<a href="account.html" class="actions-header__item _icon-favorite"></a>
+					<a href="account.html" class="actions-header__item _icon-user"></a>
+					<a href="cart.html" class="actions-header__item _icon-cart"></a>
 				</div>
 				<button class="menu-switch" aria-label="Open/Close menu">
 					<span class="menu-switch__body">
@@ -73,15 +73,123 @@
 								</div>
 							</div>
 							<nav data-tabs-titles class="tabs-account__navigation">
-								<button type="button" class="tabs-account__title _icon-bags">My orders</button>
+								<button type="button" class="tabs-account__title _icon-bags _tab-active">My orders</button>
 								<button type="button" class="tabs-account__title _icon-favorite">Wishlist</button>
-								<button type="button" class="tabs-account__title _icon-user _tab-active">My info</button>
-								<button type="button" class="tabs-account__title _icon-exit">Sign out</button>
+								<button type="button" class="tabs-account__title _icon-user">My info</button>
 							</nav>
+							<button type="button" class="tabs-account__title _icon-exit">Sign out</button>
 						</aside>
 						<div data-tabs-body class="tabs-account__content">
 							<div class="tabs-account__body">
-								Tab 1 Coming Soon
+								<div class="my-orders">
+									<h2 class="my-orders__title title-account">My Orders</h2>
+									<div data-tabs class="my-orders__tabs tabs-orders">
+										<nav data-tabs-titles class="tabs-orders__navigation">
+											<button type="button" class="tabs-orders__title _tab-active">Active</button>
+											<button type="button" class="tabs-orders__title">Cancelled</button>
+											<button type="button" class="tabs-orders__title">Completed</button>
+										</nav>
+										<div data-tabs-body class="tabs-orders__content">
+											<div class="tabs-orders__body">
+												<div class="items-orders">
+													<div class="items-orders__item order">
+														<div class="order__header header-order">
+															<h5 class="header-order__title">Order no: #123456789</h5>
+															<div class="header-order__info">
+																<div class="header-order__label">Order Date : <span>2 June 2023 2:40 PM</span></div>
+																<div class="header-order__label">Order Status :
+																	<span>Inprogress</span>
+																</div>
+																<div class="header-order__label">Estimated Delivery Date :
+																	<span>8 June 2023</span>
+																</div>
+																<div class="header-order__label">Payment Method : <span>Cash
+																		on delivery</span></div>
+															</div>
+														</div>
+														<div class="order__main main-order">
+															<a href="#" class="main-order__link-image">
+																<picture><source data-srcset="img/modules/order/01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  src="img/modules/order/01.webp" data-src="img/modules/order/01.webp" alt="Black Printed T-shirt" class="ibg"></picture>
+															</a>
+															<div class="main-order__body">
+																<h5 class="main-order__title"><a href="#" class="main-order__link-title">Black
+																		Printed T-shirt</a></h5>
+																<div class="main-order__label">Colour: <span>Black</span></div>
+																<div class="main-order__label">Qty: <span>1</span></div>
+																<div class="main-order__label main-order__label--gray">Total : $23.00</div>
+															</div>
+															<a href="#" class="main-order__link button">View Detail</a>
+														</div>
+													</div>
+													<div class="items-orders__item order">
+														<div class="order__header header-order">
+															<h5 class="header-order__title">Order no: #123456789</h5>
+															<div class="header-order__info">
+																<div class="header-order__label">Order Date : <span>2 June 2023 2:40 PM</span></div>
+																<div class="header-order__label">Order Status :
+																	<span>Inprogress</span>
+																</div>
+																<div class="header-order__label">Estimated Delivery Date :
+																	<span>8 June 2023</span>
+																</div>
+																<div class="header-order__label">Payment Method : <span>Cash
+																		on delivery</span></div>
+															</div>
+														</div>
+														<div class="order__main main-order">
+															<a href="#" class="main-order__link-image">
+																<picture><source data-srcset="img/modules/order/02.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  src="img/modules/order/02.webp" data-src="img/modules/order/02.webp" alt="Printed blue & white Cote " class="ibg"></picture>
+															</a>
+															<div class="main-order__body">
+																<h5 class="main-order__title"><a href="#" class="main-order__link-title">Printed blue &
+																		white Cote </a></h5>
+																<div class="main-order__label">Colour: <span>White</span></div>
+																<div class="main-order__label">Qty: <span>1</span></div>
+																<div class="main-order__label main-order__label--gray">Total : $143.00</div>
+															</div>
+															<a href="#" class="main-order__link button">View Detail</a>
+														</div>
+													</div>
+													<div class="items-orders__item order">
+														<div class="order__header header-order">
+															<h5 class="header-order__title">Order no: #123456789</h5>
+															<div class="header-order__info">
+																<div class="header-order__label">Order Date : <span>2 June 2023 2:40 PM</span></div>
+																<div class="header-order__label">Order Status :
+																	<span>Inprogress</span>
+																</div>
+																<div class="header-order__label">Estimated Delivery Date :
+																	<span>8 June 2023</span>
+																</div>
+																<div class="header-order__label">Payment Method : <span>Cash
+																		on delivery</span></div>
+															</div>
+														</div>
+														<div class="order__main main-order">
+															<a href="#" class="main-order__link-image">
+																<picture><source data-srcset="img/modules/order/03.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  src="img/modules/order/03.webp" data-src="img/modules/order/03.webp" alt="Blue Shirt" class="ibg"></picture>
+															</a>
+															<div class="main-order__body">
+																<h5 class="main-order__title"><a href="#" class="main-order__link-title">Blue Shirt</a>
+																</h5>
+																<div class="main-order__label">Colour: <span>Blue</span></div>
+																<div class="main-order__label">Qty: <span>1</span></div>
+																<div class="main-order__label main-order__label--gray">Total : $93.00</div>
+															</div>
+															<a href="#" class="main-order__link button">View Detail</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="tabs-orders__body">
+												<picture><source data-srcset="img/modules/jujutsu/01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  src="img/modules/jujutsu/01.webp" data-src="img/modules/jujutsu/01.webp" alt="Jujutsu image" class="ibg"></picture>
+											</div>
+											<div class="tabs-orders__body">
+												<picture><source data-srcset="img/modules/jujutsu/02.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  src="img/modules/jujutsu/02.webp" data-src="img/modules/jujutsu/02.webp" alt="Jujutsu image" class="ibg"></picture>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 							<div class="tabs-account__body">
 								<section class="wishlist">
@@ -90,7 +198,7 @@
 										<article class="product-wishlist">
 											<button type="button" class="product-wishlist__remove _icon-close" aria-label="Remove item"></button>
 											<a href="#" target="_blank" class="product-wishlist__link-image">
-												<picture><source srcset="img/modules/wishlist/01.webp" type="image/webp"><img src="img/modules/wishlist/01.webp" alt="Blue Flower Print Crop Top" class="ibg"></picture>
+												<picture><source data-srcset="img/modules/wishlist/01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  src="img/modules/wishlist/01.webp" data-src="img/modules/wishlist/01.webp" alt="Blue Flower Print Crop Top" class="ibg"></picture>
 											</a>
 											<div class="product-wishlist__body">
 												<h5 class="product-wishlist__title"> <a href="#" class="product-wishlist__link-title">Blue
@@ -104,7 +212,7 @@
 										<article class="product-wishlist">
 											<button type="button" class="product-wishlist__remove _icon-close" aria-label="Remove item"></button>
 											<a href="#" target="_blank" class="product-wishlist__link-image">
-												<picture><source srcset="img/modules/wishlist/02.webp" type="image/webp"><img src="img/modules/wishlist/02.webp" alt="Yellow Flower Print Dress " class="ibg"></picture>
+												<picture><source data-srcset="img/modules/wishlist/02.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  src="img/modules/wishlist/02.webp" data-src="img/modules/wishlist/02.webp" alt="Yellow Flower Print Dress " class="ibg"></picture>
 											</a>
 											<div class="product-wishlist__body">
 												<h5 class="product-wishlist__title"><a href="#" class="product-wishlist__link-title">Yellow
@@ -118,7 +226,7 @@
 										<article class="product-wishlist">
 											<button type="button" class="product-wishlist__remove _icon-close" aria-label="Remove item"></button>
 											<a href="#" target="_blank" class="product-wishlist__link-image">
-												<picture><source srcset="img/modules/wishlist/03.webp" type="image/webp"><img src="img/modules/wishlist/03.webp" alt="White Hoodie long sleeve" class="ibg"></picture>
+												<picture><source data-srcset="img/modules/wishlist/03.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  src="img/modules/wishlist/03.webp" data-src="img/modules/wishlist/03.webp" alt="White Hoodie long sleeve" class="ibg"></picture>
 											</a>
 											<div class="product-wishlist__body">
 												<h5 class="product-wishlist__title"><a href="#" class="product-wishlist__link-title">White
@@ -132,7 +240,7 @@
 										<article class="product-wishlist">
 											<button type="button" class="product-wishlist__remove _icon-close" aria-label="Remove item"></button>
 											<a href="#" target="_blank" class="product-wishlist__link-image">
-												<picture><source srcset="img/modules/wishlist/04.webp" type="image/webp"><img src="img/modules/wishlist/04.webp" alt="Brown men’s long sleeve T-shirt" class="ibg"></picture>
+												<picture><source data-srcset="img/modules/wishlist/04.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  src="img/modules/wishlist/04.webp" data-src="img/modules/wishlist/04.webp" alt="Brown men’s long sleeve T-shirt" class="ibg"></picture>
 											</a>
 											<div class="product-wishlist__body">
 												<h5 class="product-wishlist__title"><a href="#" class="product-wishlist__link-title">Brown men’s
@@ -247,9 +355,6 @@
 										</div>
 									</div>
 								</section>
-							</div>
-							<div class="tabs-account__body">
-								Tab 4 Coming Soon
 							</div>
 						</div>
 					</div>
@@ -386,7 +491,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20240330215854"></script>
+	<script src="js/app.min.js?_v=20240404194512"></script>
 </body>
 
 </html>
