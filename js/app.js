@@ -5701,7 +5701,7 @@
                 var slide = document.createElement("li");
                 slide.classList.add("splide__slide", "thumbnails-slide-gallery");
                 var thumbnailImage = document.createElement("img");
-                thumbnailImage.src = image.src;
+                thumbnailImage.src = image.getAttribute("data-src");
                 thumbnailImage.alt = image.alt;
                 thumbnailImage.classList.add("thumbnails-slide-gallery__image", "ibg");
                 slide.appendChild(thumbnailImage);
